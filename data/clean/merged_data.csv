@@ -1,0 +1,239 @@
+club,year,ladder_position,membership,finals,top4
+Adelaide,2012,2,46005,1,1
+Brisbane,2012,13,20762,0,0
+Carlton,2012,10,45440,0,0
+Collingwood,2012,4,72688,1,1
+Essendon,2012,11,47708,0,0
+Fremantle,2012,7,42918,1,0
+Geelong,2012,6,40205,1,0
+Gold Coast,2012,17,11204,0,0
+GWS,2012,18,10241,0,0
+Hawthorn,2012,1,60841,1,1
+North Melbounre,2012,8,33423,1,0
+Port Adelaide,2012,14,35543,0,0
+Richmond,2012,12,53027,0,0
+St. Kilda,2012,9,35440,0,0
+Sydney,2012,3,29873,1,1
+West Coast ,2012,5,57377,1,0
+Western Bulldogs,2012,15,30007,0,0
+Adelaide,2013,11,46405,0,0
+Brisbane,2013,12,24130,0,0
+Carlton,2013,8,50564,1,0
+Collingwood,2013,6,78427,1,0
+Essendon,2013,9,56173,0,0
+Fremantle,2013,3,43880,1,1
+Geelong,2013,2,42884,1,1
+Gold Coast,2013,14,12502,0,0
+GWS,2013,18,12681,0,0
+Hawthorn,2013,1,63353,1,1
+North Melbounre,2013,10,34607,0,0
+Port Adelaide,2013,7,39838,1,0
+Richmond,2013,5,60321,1,0
+St. Kilda,2013,16,32707,0,0
+Sydney,2013,4,36358,1,1
+West Coast ,2013,13,58501,0,0
+Western Bulldogs,2013,15,30209,0,0
+Adelaide,2014,10,54249,0,0
+Brisbane,2014,15,24012,0,0
+Carlton,2014,13,47485,0,0
+Collingwood,2014,11,79347,0,0
+Essendon,2014,7,60626,1,0
+Fremantle,2014,4,48777,1,1
+Geelong,2014,3,43803,1,1
+Gold Coast,2014,12,13478,0,0
+GWS,2014,16,13040,0,0
+Hawthorn,2014,2,68650,1,1
+North Melbounre,2014,6,39060,1,0
+Port Adelaide,2014,5,48968,1,0
+Richmond,2014,8,66122,1,0
+St. Kilda,2014,18,30739,0,0
+Sydney,2014,1,40126,1,1
+West Coast ,2014,9,58529,0,0
+Western Bulldogs,2014,14,31538,0,0
+Adelaide,2015,7,52920,1,0
+Brisbane,2015,17,25408,0,0
+Carlton,2015,18,47305,0,0
+Collingwood,2015,12,75037,0,0
+Essendon,2015,15,60818,0,0
+Fremantle,2015,1,51433,1,1
+Geelong,2015,10,44312,0,0
+Gold Coast,2015,16,13643,0,0
+GWS,2015,11,13480,0,0
+Hawthorn,2015,3,72924,1,1
+North Melbounre,2015,8,41012,1,0
+Port Adelaide,2015,9,54057,0,0
+Richmond,2015,5,70809,1,0
+St. Kilda,2015,14,32746,0,0
+Sydney,2015,4,48836,1,1
+West Coast ,2015,2,60221,1,1
+Western Bulldogs,2015,6,35222,1,0
+Adelaide,2016,5,54307,1,0
+Brisbane,2016,17,23286,0,0
+Carlton,2016,14,50130,0,0
+Collingwood,2016,12,74643,0,0
+Essendon,2016,18,57494,0,0
+Fremantle,2016,16,51889,0,0
+Geelong,2016,2,50571,1,1
+Gold Coast,2016,15,12854,0,0
+GWS,2016,4,15312,1,1
+Hawthorn,2016,3,75351,1,1
+North Melbounre,2016,8,45014,1,0
+Port Adelaide,2016,10,53743,0,0
+Richmond,2016,13,72278,0,0
+St. Kilda,2016,9,38009,0,0
+Sydney,2016,1,56523,1,1
+West Coast ,2016,6,65188,1,0
+Western Bulldogs,2016,7,39459,1,0
+Adelaide,2017,1,56865,1,1
+Brisbane,2017,18,21362,0,0
+Carlton,2017,16,50326,0,0
+Collingwood,2017,13,75879,0,0
+Essendon,2017,7,67768,1,0
+Fremantle,2017,14,51254,0,0
+Geelong,2017,2,54854,1,1
+Gold Coast,2017,17,11665,0,0
+GWS,2017,4,20944,1,1
+Hawthorn,2017,12,75663,0,0
+North Melbounre,2017,15,40343,0,0
+Port Adelaide,2017,5,52129,1,0
+Richmond,2017,3,72669,1,1
+St. Kilda,2017,11,42052,0,0
+Sydney,2017,6,58838,1,0
+West Coast ,2017,8,65064,1,0
+Western Bulldogs,2017,10,47653,0,0
+Adelaide,2018,12,64379,0,0
+Brisbane,2018,14,24867,0,0
+Carlton,2018,18,56005,0,0
+Collingwood,2018,3,75507,1,1
+Essendon,2018,11,79319,0,0
+Fremantle,2018,14,55639,0,0
+Geelong,2018,8,63818,1,0
+Gold Coast,2018,17,12108,0,0
+GWS,2018,7,25243,1,0
+Hawthorn,2018,4,80302,1,1
+North Melbounre,2018,9,40789,0,0
+Port Adelaide,2018,10,54386,0,0
+Richmond,2018,1,100726,1,1
+St. Kilda,2018,16,46301,0,0
+Sydney,2018,6,60934,1,0
+West Coast ,2018,2,80290,1,1
+Western Bulldogs,2018,13,43246,0,0
+Adelaide,2019,11,64437,0,0
+Brisbane,2019,2,28023,1,1
+Carlton,2019,16,64269,0,0
+Collingwood,2019,4,85226,1,1
+Essendon,2019,8,84237,1,0
+Fremantle,2019,13,51431,0,0
+Geelong,2019,1,65063,1,1
+Gold Coast,2019,18,13649,0,0
+GWS,2019,6,30109,1,0
+Hawthorn,2019,9,81211,0,0
+North Melbounre,2019,12,42419,0,0
+Port Adelaide,2019,10,51951,0,0
+Richmond,2019,3,103358,1,1
+St. Kilda,2019,14,43038,0,0
+Sydney,2019,15,61912,0,0
+West Coast ,2019,5,90445,1,0
+Western Bulldogs,2019,7,44373,1,0
+Adelaide,2020,18,54891,0,0
+Brisbane,2020,2,29277,1,1
+Carlton,2020,11,67035,0,0
+Collingwood,2020,8,76862,1,0
+Essendon,2020,13,66686,0,0
+Fremantle,2020,12,51577,0,0
+Geelong,2020,4,60066,1,1
+Gold Coast,2020,14,16236,0,0
+GWS,2020,10,30841,0,0
+Hawthorn,2020,15,76343,0,0
+North Melbounre,2020,17,38667,0,0
+Port Adelaide,2020,1,46820,1,1
+Richmond,2020,3,100420,1,1
+St. Kilda,2020,6,48588,1,0
+Sydney,2020,16,48322,0,0
+West Coast ,2020,5,100776,1,0
+Western Bulldogs,2020,7,38876,1,0
+Adelaide,2021,15,60232,0,0
+Brisbane,2021,4,40289,1,1
+Carlton,2021,13,81302,0,0
+Collingwood,2021,17,82527,0,0
+Essendon,2021,8,81662,1,0
+Fremantle,2021,11,50342,0,0
+Geelong,2021,3,70293,1,1
+Gold Coast,2021,16,19460,0,0
+GWS,2021,7,30185,1,0
+Hawthorn,2021,14,77079,0,0
+North Melbounre,2021,18,46357,0,0
+Port Adelaide,2021,2,56532,1,1
+Richmond,2021,12,105084,0,0
+St. Kilda,2021,10,55802,0,0
+Sydney,2021,6,50144,1,0
+West Coast ,2021,9,106422,0,0
+Western Bulldogs,2021,5,46541,1,0
+Adelaide,2022,14,63009,0,0
+Brisbane,2022,6,43139,1,0
+Carlton,2022,9,88776,0,0
+Collingwood,2022,4,100384,1,1
+Essendon,2022,15,86001,0,0
+Fremantle,2022,5,56105,1,0
+Geelong,2022,1,71943,1,1
+Gold Coast,2022,12,21422,0,0
+GWS,2022,16,32614,0,0
+Hawthorn,2022,13,81494,0,0
+North Melbounre,2022,18,49250,0,0
+Port Adelaide,2022,11,58643,0,0
+Richmond,2022,7,100792,1,0
+St. Kilda,2022,10,60172,0,0
+Sydney,2022,3,55934,1,1
+West Coast ,2022,17,102897,0,0
+Western Bulldogs,2022,8,50941,1,0
+Adelaide,2023,10,68536,0,0
+Brisbane,2023,2,54676,1,1
+Carlton,2023,5,95277,1,0
+Collingwood,2023,1,106470,1,1
+Essendon,2023,11,86274,0,0
+Fremantle,2023,14,62064,0,0
+Geelong,2023,12,82155,0,0
+Gold Coast,2023,15,23359,0,0
+GWS,2023,7,33036,1,0
+Hawthorn,2023,16,80698,0,0
+North Melbounre,2023,17,51084,0,0
+Port Adelaide,2023,3,64041,1,1
+Richmond,2023,13,101349,0,0
+St. Kilda,2023,6,60239,1,0
+Sydney,2023,8,65332,1,0
+West Coast ,2023,18,103275,0,0
+Western Bulldogs,2023,9,56302,0,0
+Adelaide,2024,15,75477,0,0
+Brisbane,2024,5,63268,1,0
+Carlton,2024,8,106345,1,0
+Collingwood,2024,9,110628,0,0
+Essendon,2024,11,83664,0,0
+Fremantle,2024,10,62237,0,0
+Geelong,2024,3,90798,1,1
+Gold Coast,2024,13,26157,0,0
+GWS,2024,4,36629,1,1
+Hawthorn,2024,7,83823,1,0
+North Melbounre,2024,17,50628,0,0
+Port Adelaide,2024,2,66015,1,1
+Richmond,2024,18,98489,0,0
+St. Kilda,2024,12,60467,0,0
+Sydney,2024,1,73757,1,1
+West Coast ,2024,16,103498,0,0
+Western Bulldogs,2024,6,62328,1,0
+Adelaide,2025,1,81067,1,1
+Brisbane,2025,3,75115,1,1
+Carlton,2025,11,100743,0,0
+Collingwood,2025,4,112491,1,1
+Essendon,2025,15,85568,0,0
+Fremantle,2025,6,66179,1,0
+Geelong,2025,2,92379,1,1
+Gold Coast,2025,7,30107,1,0
+GWS,2025,5,37705,1,0
+Hawthorn,2025,8,87204,1,0
+North Melbounre,2025,16,56283,0,0
+Port Adelaide,2025,13,72656,0,0
+Richmond,2025,17,92531,0,0
+St. Kilda,2025,12,65509,0,0
+Sydney,2025,10,76674,0,0
+West Coast ,2025,18,107079,0,0
+Western Bulldogs,2025,9,65584,0,0
