@@ -38,12 +38,12 @@ This project estimates whether crossing the AFL finals qualification threshold c
 
 REPOSITORY STRUCTURE
 
-├── README.md     # project overview + instructions
-├── data/
-│   ├── raw/      # original data files
-│   └── clean/    # cleaned, merged datasets + codebook
-├── code/         # scripts for cleaning + analysis
-└── outputs/      # (optional) plots, tables, results
+README.md     # project overview + instructions
+data/
+- raw/      # original data files
+- clean/    # cleaned, merged datasets + codebook
+code/         # scripts for cleaning + analysis
+outputs/      # (optional) plots, tables, results
 
 
 ## Software Requirements
