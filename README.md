@@ -30,11 +30,11 @@ Variables:
 Type: integer
 
 3. Ladder Position
-Description: Final ladder position for the team in that year
-Values: 1–18
-Units: Rank (1 = highest, 18 = lowest)
-Source: AFL.com.au
-Notes: Lower number = better performance
+- Description: Final ladder position for the team in that year
+- Values: 1–18
+- Units: Rank (1 = highest, 18 = lowest)
+- Source: AFL.com.au
+- Notes: Lower number = better performance
 
 
 Empirical Strategy
