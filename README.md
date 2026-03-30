@@ -63,4 +63,4 @@ pip install -r requirements.txt
 Raw Data Sources
 
 
-Ladder data: manually transcribed from AFL.com.au into Excel, then exported to CSV (ladder_raw.csv) and placed in 
+Ladder data: manually transcribed from AFL.com.au into Excel, then exported to CSV (ladder_raw.csv) and placed in data/raw/
