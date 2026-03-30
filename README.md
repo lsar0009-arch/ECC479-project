@@ -59,9 +59,39 @@ docs/ <- notes and documentation
 Install all packages with:
 pip install -r requirements.txt
 
+Scripts
+All scripts are located in the src/ folder.
+
+01_clean_memberships.py  
+Cleans the raw membership data and outputs a cleaned CSV to data/clean/.
+
+02_clean_ladder_positions.py  
+Cleans the raw ladder data, extracts finishing positions, and creates a finals indicator.
+
+03_merge_data.py  
+Merges the cleaned membership and ladder datasets into a single analysis‑ready file.
+
+04_analysis.py  
+Loads the merged dataset and produces tables, figures, and regression output in outputs/.
 
 Raw Data Sources
 
 Ladder data: manually transcribed from AFL.com.au into Excel, then exported to CSV (ladder_raw.csv) and placed in data/raw/
 
 Membership data for 2012–2024 was manually copied from FootyIndustry.com (1984–2025 historical membership tables). Membership data for 2025 was taken directly from AFL.com.au due to more up‑to‑date reporting.These values were combined into a single raw CSV (membership_raw.csv) stored in data/raw/
+
+
+How to Run the Project From Scratch
+Place the raw data files into data/raw/
+
+membership_raw.csv
+
+ladder_raw.csv
+
+Install required Python packages.
+
+Run the scripts in order (see above).
+
+Cleaned datasets will appear in data/clean/.
+
+Final outputs (plots, tables) will appear in outputs/.
