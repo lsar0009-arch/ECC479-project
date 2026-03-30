@@ -1,6 +1,30 @@
 # ECC3479-project
-Does making the AFL finals have a measurable economic impact on clubs and the league, particularly through membership revenue and league-wide broadcasting value?
+Research Question: Does crossing the AFL finals qualification threshold — comparing clubs finishing 6th–8th versus 9th–10th — generate a measurably different impact on club membership tallies?
 
-We will use AFL Tables for the analysis.
+Why is it economically relevant?
+Membership is one of the main sources, if not the main source of revenue for AFL clubs.
+Revenue for AFL teams directly contributes to;
+- Financial stability
+- Club operations
+- Investment in facilities, staP, and players
+If found to be true, it demonstrates how on-field performance translates to an economic payoff.
 
-We will use panel data - years 2012-2025
+
+Data:
+Membership data
+- Total club membership numbers, year on year
+- Total membership number, year on year
+Team performance data
+- Did the team play finals?
+- Ladder position
+- Number of wins
+Control variables
+- Stadium size
+- City populations
+- Teams’ years in league (history)
+Time
+- Last 15 years (2012-2026)
+
+Afltables.com.au
+AFL.com.au
+
