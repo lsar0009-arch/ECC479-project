@@ -10,6 +10,9 @@ Revenue for AFL teams directly contributes to;
 - Investment in facilities, staP, and players
 If found to be true, it demonstrates how on-field performance translates to an economic payoff.
 
+Empirical Strategy
+This project estimates whether crossing the AFL finals qualification threshold causes a measurable change in club membership numbers by comparing teams that finish just inside the cutoff (6th–8th) with those that finish just outside it (9th–10th). Because clubs near the threshold are typically similar in underlying quality, resources, and supporter engagement, their relative position around the cutoff can be treated as quasi‑random. This creates a natural experiment where qualifying for finals acts as the “treatment” and narrowly missing out serves as the “control.” By analysing differences in subsequent membership tallies—using simple comparisons and regression‑based adjustments—we aim to isolate the causal impact of finals participation on fan behaviour and club revenue.
+
 
 Variables:
 
@@ -35,11 +38,6 @@ Type: integer
 - Units: Rank (1 = highest, 18 = lowest)
 - Source: AFL.com.au
 - Notes: Lower number = better performance
-
-
-Empirical Strategy
-This project estimates whether crossing the AFL finals qualification threshold causes a measurable change in club membership numbers by comparing teams that finish just inside the cutoff (6th–8th) with those that finish just outside it (9th–10th). Because clubs near the threshold are typically similar in underlying quality, resources, and supporter engagement, their relative position around the cutoff can be treated as quasi‑random. This creates a natural experiment where qualifying for finals acts as the “treatment” and narrowly missing out serves as the “control.” By analysing differences in subsequent membership tallies—using simple comparisons and regression‑based adjustments—we aim to isolate the causal impact of finals participation on fan behaviour and club revenue.
-
 
 
 REPOSITORY STRUCTURE
