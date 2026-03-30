@@ -62,5 +62,6 @@ pip install -r requirements.txt
 
 Raw Data Sources
 
-
 Ladder data: manually transcribed from AFL.com.au into Excel, then exported to CSV (ladder_raw.csv) and placed in data/raw/
+
+Membership data for 2012–2024 was manually copied from FootyIndustry.com (1984–2025 historical membership tables). Membership data for 2025 was taken directly from AFL.com.au due to more up‑to‑date reporting.These values were combined into a single raw CSV (membership_raw.csv) stored in data/raw/
