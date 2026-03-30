@@ -11,25 +11,31 @@ Revenue for AFL teams directly contributes to;
 If found to be true, it demonstrates how on-field performance translates to an economic payoff.
 
 
-Data:
+Variables:
 
-Membership data
-- Total club membership numbers, year on year
-- Total membership number, year on year
-Team performance data
-- Did the team play finals?
-- Ladder position
-- Number of wins
-Control variables
-- Stadium size
-- City populations
-- Teams’ years in league (history)
-Time
-- Last 15 years (2012-2026)
+1. Team
+- Type: string (text)
+- Description: Name of AFL club
+- Values: 18 AFL clubs (Adeleaide, Brisbane, ...)
+- Source: Manually transcribed from AFL.com.au ladder pages
+- Notes: Team names match membership dataset exactly for merging
 
-Afltables.com.au
+2. Year
+- Type: integer
+- Description: Season year corresponding to the ladder position
+- Values: 2012–2025
+- Source: AFL.com.au ladder pages
+- Notes: No missing years in this range
 
-AFL.com.au
+Type: integer
+
+3. Ladder Position
+Description: Final ladder position for the team in that year
+Values: 1–18
+Units: Rank (1 = highest, 18 = lowest)
+Source: AFL.com.au
+Notes: Lower number = better performance
+
 
 Empirical Strategy
 This project estimates whether crossing the AFL finals qualification threshold causes a measurable change in club membership numbers by comparing teams that finish just inside the cutoff (6th–8th) with those that finish just outside it (9th–10th). Because clubs near the threshold are typically similar in underlying quality, resources, and supporter engagement, their relative position around the cutoff can be treated as quasi‑random. This creates a natural experiment where qualifying for finals acts as the “treatment” and narrowly missing out serves as the “control.” By analysing differences in subsequent membership tallies—using simple comparisons and regression‑based adjustments—we aim to isolate the causal impact of finals participation on fan behaviour and club revenue.
@@ -55,9 +61,9 @@ docs/ <- notes and documentation
   - matplotlib
   - seaborn
   - statsmodels
-
 Install all packages with:
 pip install -r requirements.txt
+
 
 Scripts
 All scripts are located in the src/ folder.
@@ -82,16 +88,17 @@ Membership data for 2012–2024 was manually copied from FootyIndustry.com (1984
 
 
 How to Run the Project From Scratch
-Place the raw data files into data/raw/
 
-membership_raw.csv
+1. Place the raw data files into data/raw/
 
-ladder_raw.csv
+- membership_raw.csv
 
-Install required Python packages.
+- ladder_raw.csv
 
-Run the scripts in order (see above).
+2. Install required Python packages.
 
-Cleaned datasets will appear in data/clean/.
+3. Run the scripts in order.
 
-Final outputs (plots, tables) will appear in outputs/.
+- Cleaned datasets will appear in data/clean/.
+
+4. Final outputs (plots, tables) will appear in outputs/.
