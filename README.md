@@ -66,17 +66,21 @@ pip install -r requirements.txt
 Scripts
 All scripts are located in the src/ folder.
 
-01_clean_memberships.py  
-Cleans the raw membership data and outputs a cleaned CSV to data/clean/.
+00_import_afl_members.py
+Imports historical membership data from https://footyindustry.com/html/AFL_Members.htm
+
+01_clean_memberships.py
+Cleans the raw membership data from years 2012 to 2025  and outputs a cleaned CSV to data/clean/.
 
 02_clean_ladder_positions.py  
 Cleans the raw ladder data, extracts finishing positions, and creates a finals indicator.
 
-03_merge_data.py  
+03_merge_ladder_membership.py  
 Merges the cleaned membership and ladder datasets into a single analysis‑ready file.
 
 04_analysis.py  
 Loads the merged dataset and produces tables, figures, and regression output in outputs/.
+
 
 Raw Data Sources
 
