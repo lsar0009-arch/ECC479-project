@@ -62,6 +62,21 @@ docs/ <- notes and documentation
 Install all packages with:
 pip install -r requirements.txt
 
+How to Run the Project From Scratch
+
+1. Place the raw data files into data/raw/
+
+- membership_raw.csv
+
+- ladder_raw.csv
+
+2. Install required Python packages.
+
+3. Run the scripts in order.
+
+- Cleaned datasets will appear in data/clean/.
+
+4. Final outputs (plots, tables) will appear in outputs/.
 
 Scripts
 All scripts are located in the src/ folder.
@@ -89,18 +104,3 @@ Ladder data: manually transcribed from AFL.com.au into Excel, then exported to C
 Membership data for 2012–2024 was manually copied from FootyIndustry.com (1984–2025 historical membership tables). Membership data for 2025 was taken directly from AFL.com.au due to more up‑to‑date reporting.These values were combined into a single raw CSV (membership_raw.csv) stored in data/raw/
 
 
-How to Run the Project From Scratch
-
-1. Place the raw data files into data/raw/
-
-- membership_raw.csv
-
-- ladder_raw.csv
-
-2. Install required Python packages.
-
-3. Run the scripts in order.
-
-- Cleaned datasets will appear in data/clean/.
-
-4. Final outputs (plots, tables) will appear in outputs/.
