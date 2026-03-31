@@ -1,7 +1,7 @@
 # ECC3479-project
 Research Question: Does crossing the AFL finals qualification threshold — comparing clubs finishing 6th–8th versus 9th–10th — generate a measurably different impact on club membership tallies?
 
-Why is it economically relevant?
+Economic Relevance
 
 Membership is one of the main sources, if not the main source of revenue for AFL clubs.
 Revenue for AFL teams directly contributes to;
@@ -10,11 +10,17 @@ Revenue for AFL teams directly contributes to;
 - Investment in facilities, staP, and players
 If found to be true, it demonstrates how on-field performance translates to an economic payoff.
 
+
 Empirical Strategy
-This project estimates whether crossing the AFL finals qualification threshold causes a measurable change in club membership numbers by comparing teams that finish just inside the cutoff (6th–8th) with those that finish just outside it (9th–10th). Because clubs near the threshold are typically similar in underlying quality, resources, and supporter engagement, their relative position around the cutoff can be treated as quasi‑random. This creates a natural experiment where qualifying for finals acts as the “treatment” and narrowly missing out serves as the “control.” By analysing differences in subsequent membership tallies—using simple comparisons and regression‑based adjustments—we aim to isolate the causal impact of finals participation on fan behaviour and club revenue.
+
+This project estimates whether crossing the AFL finals qualification threshold causes a measurable change in club membership numbers by comparing teams that finish just inside the cutoff (6th–8th) with those that finish just outside it (9th–10th). 
+Because clubs near the threshold are typically similar in underlying quality, resources, and supporter engagement, their relative position around the cutoff can be treated as quasi‑random. This creates a natural experiment:
+- Treatment: qualifying for finals
+- control: narrowly missing finals
+ By analysing differences in subsequent membership tallies—using simple comparisons and regression‑based adjustments—we aim to isolate the causal impact of finals participation on fan behaviour and club revenue.
 
 
-Variables:
+Key Variables:
 
 1. Team
 - Type: string (text)
@@ -42,12 +48,34 @@ Type: integer
 
 REPOSITORY STRUCTURE
 
-README.md
-data/raw/ <- source files, never edited
-data/clean/ <- cleaned versions produced by code
-src/ <- all analysis scripts
-outputs/ <- tables, figures
-docs/ <- notes and documentation
+ECC479-PROJECT/
+├── .venv/                         
+│
+├── data/
+│   ├── raw/                       
+│   │   ├── ladder_raw.csv
+│   │   ├── membership_1984-2024_website.csv
+│   │   └── membership_2025_raw.csv
+│   │
+│   └── clean/                     
+│       ├── membership_clean.csv
+│       ├── merged_data_2012_2025.csv
+│       └── docs/
+│           └── codebook.md
+│
+├── docs/                          
+│
+├── outputs/                       
+│
+├── src/                           
+│   ├── 00_import_afl_members.py
+│   ├── 01_clean_memberships.py
+│   ├── 02_clean_ladder_positions.py
+│   ├── 03_merge_ladder_membership.py
+│   └── 04_analysis.py
+│
+└── README.md
+
 
 
 ## Software Requirements
@@ -59,26 +87,38 @@ docs/ <- notes and documentation
   - matplotlib
   - seaborn
   - statsmodels
+
 Install all packages with:
 pip install -r requirements.txt
 
+
 How to Run the Project From Scratch
 
-1. Place the raw data files into data/raw/
+1. Place the raw data files into data/raw/:
 
-- membership_raw.csv
-
+- membership_r1984-2024_website.csv
+- membership_2025_raw
 - ladder_raw.csv
 
 2. Install required Python packages.
 
 3. Run the scripts in order.
 
+- 00_import_afl_members.py
+- 01_clean_memberships.py
+- 02_clean_ladder_positions.py
+- 03_merge_ladder_membership.py
+- 04_analysis.py
+
 - Cleaned datasets will appear in data/clean/.
 
-4. Final outputs (plots, tables) will appear in outputs/.
+4. Final outputs
 
-Scripts
+- cleaned datasets -> data/clean/
+- Figures, tables, regression results -> outputs/
+
+Scripts Descriptions
+
 All scripts are located in the src/ folder.
 
 00_import_afl_members.py
