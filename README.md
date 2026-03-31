@@ -11,6 +11,8 @@ Revenue for AFL teams directly contributes to;
 If found to be true, it demonstrates how on-field performance translates to an economic payoff.
 
 
+
+
 Empirical Strategy
 
 This project estimates whether crossing the AFL finals qualification threshold causes a measurable change in club membership numbers by comparing teams that finish just inside the cutoff (6th–8th) with those that finish just outside it (9th–10th). 
@@ -18,6 +20,8 @@ Because clubs near the threshold are typically similar in underlying quality, re
 - Treatment: qualifying for finals
 - control: narrowly missing finals
  By analysing differences in subsequent membership tallies—using simple comparisons and regression‑based adjustments—we aim to isolate the causal impact of finals participation on fan behaviour and club revenue.
+
+
 
 
 Key Variables:
@@ -46,35 +50,38 @@ Type: integer
 - Notes: Lower number = better performance
 
 
+
+
 REPOSITORY STRUCTURE
 
 ECC479-PROJECT/
-├── .venv/                         
-│
-├── data/
-│   ├── raw/                       
-│   │   ├── ladder_raw.csv
-│   │   ├── membership_1984-2024_website.csv
-│   │   └── membership_2025_raw.csv
-│   │
-│   └── clean/                     
-│       ├── membership_clean.csv
-│       ├── merged_data_2012_2025.csv
-│       └── docs/
-│           └── codebook.md
-│
-├── docs/                          
-│
-├── outputs/                       
-│
-├── src/                           
-│   ├── 00_import_afl_members.py
-│   ├── 01_clean_memberships.py
-│   ├── 02_clean_ladder_positions.py
-│   ├── 03_merge_ladder_membership.py
-│   └── 04_analysis.py
-│
-└── README.md
+.venv/                         
+
+data/
+- raw/                       
+  - ladder_raw.csv
+  - membership_1984-2024_website.csv
+  - membership_2025_raw.csv
+
+- clean/                     
+  - membership_clean.csv
+  - merged_data_2012_2025.csv
+
+docs/
+- codebook.md
+
+docs/                          
+outputs/                       
+
+src/                           
+- 00_import_afl_members.py
+- 01_clean_memberships.py
+- 02_clean_ladder_positions.py
+- 03_merge_ladder_membership.py
+- 04_analysis.py
+README.md
+
+
 
 
 
@@ -90,6 +97,8 @@ ECC479-PROJECT/
 
 Install all packages with:
 pip install -r requirements.txt
+
+
 
 
 How to Run the Project From Scratch
@@ -117,6 +126,9 @@ How to Run the Project From Scratch
 - cleaned datasets -> data/clean/
 - Figures, tables, regression results -> outputs/
 
+
+
+
 Scripts Descriptions
 
 All scripts are located in the src/ folder.
@@ -135,6 +147,9 @@ Merges the cleaned membership and ladder datasets into a single analysis‑ready
 
 04_analysis.py  
 Loads the merged dataset and produces tables, figures, and regression output in outputs/.
+
+
+
 
 
 Raw Data Sources
