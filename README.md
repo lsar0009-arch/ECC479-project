@@ -54,7 +54,7 @@ Type: integer
 
 REPOSITORY STRUCTURE
 
-ECC479-PROJECT/
+ECC3479-PROJECT/
 
 .venv/                         
 
