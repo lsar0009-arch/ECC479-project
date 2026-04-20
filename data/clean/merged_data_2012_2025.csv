@@ -12,6 +12,7 @@ Melbourne,2012,16,35459,0,0
 Port Adelaide,2012,14,35543,0,0
 Richmond,2012,12,53027,0,0
 Sydney,2012,3,29873,1,1
+West Coast,2012,5,57377,1,0
 Western Bulldogs,2012,15,30007,0,0
 Adelaide,2013,11,46405,0,0
 Brisbane,2013,12,24130,0,0
@@ -26,6 +27,7 @@ Melbourne,2013,17,33177,0,0
 Port Adelaide,2013,7,39838,1,0
 Richmond,2013,5,60321,1,0
 Sydney,2013,4,36358,1,1
+West Coast,2013,13,58501,0,0
 Western Bulldogs,2013,15,30209,0,0
 Adelaide,2014,10,54249,0,0
 Brisbane,2014,15,24012,0,0
@@ -40,6 +42,7 @@ Melbourne,2014,17,35911,0,0
 Port Adelaide,2014,5,48968,1,0
 Richmond,2014,8,66122,1,0
 Sydney,2014,1,40126,1,1
+West Coast,2014,9,58529,0,0
 Western Bulldogs,2014,14,31538,0,0
 Adelaide,2015,7,52920,1,0
 Brisbane,2015,17,25408,0,0
@@ -54,6 +57,7 @@ Melbourne,2015,13,35953,0,0
 Port Adelaide,2015,9,54057,0,0
 Richmond,2015,5,70809,1,0
 Sydney,2015,4,48836,1,1
+West Coast,2015,2,60221,1,1
 Western Bulldogs,2015,6,35222,1,0
 Adelaide,2016,5,54307,1,0
 Brisbane,2016,17,23286,0,0
@@ -68,6 +72,7 @@ Melbourne,2016,11,39146,0,0
 Port Adelaide,2016,10,53743,0,0
 Richmond,2016,13,72278,0,0
 Sydney,2016,1,56523,1,1
+West Coast,2016,6,65188,1,0
 Western Bulldogs,2016,7,39459,1,0
 Adelaide,2017,1,56865,1,1
 Brisbane,2017,18,21362,0,0
@@ -82,6 +87,7 @@ Melbourne,2017,9,42233,0,0
 Port Adelaide,2017,5,52129,1,0
 Richmond,2017,3,72669,1,1
 Sydney,2017,6,58838,1,0
+West Coast,2017,8,65064,1,0
 Western Bulldogs,2017,10,47653,0,0
 Adelaide,2018,12,64379,0,0
 Brisbane,2018,14,24867,0,0
@@ -96,6 +102,7 @@ Melbourne,2018,5,44275,1,0
 Port Adelaide,2018,10,54386,0,0
 Richmond,2018,1,100726,1,1
 Sydney,2018,6,60934,1,0
+West Coast,2018,2,80290,1,1
 Western Bulldogs,2018,13,43246,0,0
 Adelaide,2019,11,64437,0,0
 Brisbane,2019,2,28023,1,1
@@ -110,6 +117,7 @@ Melbourne,2019,17,52421,0,0
 Port Adelaide,2019,10,51951,0,0
 Richmond,2019,3,103358,1,1
 Sydney,2019,15,61912,0,0
+West Coast,2019,5,90445,1,0
 Western Bulldogs,2019,7,44373,1,0
 Adelaide,2020,18,54891,0,0
 Brisbane,2020,2,29277,1,1
@@ -124,6 +132,7 @@ Melbourne,2020,9,40571,0,0
 Port Adelaide,2020,1,46820,1,1
 Richmond,2020,3,100420,1,1
 Sydney,2020,16,48322,0,0
+West Coast,2020,5,100776,1,0
 Western Bulldogs,2020,7,38876,1,0
 Adelaide,2021,15,60232,0,0
 Brisbane,2021,4,40289,1,1
@@ -138,6 +147,7 @@ Melbourne,2021,1,53188,1,1
 Port Adelaide,2021,2,56532,1,1
 Richmond,2021,12,105084,0,0
 Sydney,2021,6,50144,1,0
+West Coast,2021,9,106422,0,0
 Western Bulldogs,2021,5,46541,1,0
 Adelaide,2022,14,63009,0,0
 Brisbane,2022,6,43139,1,0
@@ -152,6 +162,7 @@ Melbourne,2022,2,66484,1,1
 Port Adelaide,2022,11,58643,0,0
 Richmond,2022,7,100792,1,0
 Sydney,2022,3,55934,1,1
+West Coast,2022,17,102897,0,0
 Western Bulldogs,2022,8,50941,1,0
 Adelaide,2023,10,68536,0,0
 Brisbane,2023,2,54676,1,1
@@ -166,6 +177,7 @@ Melbourne,2023,4,70785,1,1
 Port Adelaide,2023,3,64041,1,1
 Richmond,2023,13,101349,0,0
 Sydney,2023,8,65332,1,0
+West Coast,2023,18,103275,0,0
 Western Bulldogs,2023,9,56302,0,0
 Adelaide,2024,15,75477,0,0
 Brisbane,2024,5,63268,1,0
@@ -180,6 +192,7 @@ Melbourne,2024,14,65479,0,0
 Port Adelaide,2024,2,66015,1,1
 Richmond,2024,18,98489,0,0
 Sydney,2024,1,73757,1,1
+West Coast,2024,16,103498,0,0
 Western Bulldogs,2024,6,62328,1,0
 Adelaide,2025,1,81067,1,1
 Brisbane,2025,3,75138,1,1
@@ -194,4 +207,5 @@ Melbourne,2025,14,58563,0,0
 Port Adelaide,2025,13,72656,0,0
 Richmond,2025,17,107331,0,0
 Sydney,2025,10,78671,0,0
+West Coast,2025,18,106422,0,0
 Western Bulldogs,2025,9,76584,0,0

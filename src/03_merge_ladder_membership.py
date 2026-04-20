@@ -4,6 +4,9 @@ import pandas as pd
 ladder_raw = pd.read_csv("data/raw/ladder_raw.csv", index_col=0)
 membership_clean = pd.read_csv("data/clean/membership_clean.csv")
 
+# --- Clean club names ---
+ladder_raw.index = ladder_raw.index.str.strip()
+
 # --- Transform ladder_raw from wide to long ---
 ladder_long = ladder_raw.melt(ignore_index=False, var_name="year", value_name="ladder_position").reset_index()
 ladder_long.columns = ["club", "year", "ladder_position"]
