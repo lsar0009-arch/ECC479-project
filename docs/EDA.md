@@ -49,16 +49,16 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 ### Descriptive Statistics
 
 #### Numeric Variables
-| Statistic | year | ladder_position | membership | finals | top4 |
-|-----------|------|-----------------|------------|--------|------|
-| count | 252.0 | 252.0 | 252 | 252.0 | 252.0 |
-| mean | 2018.5 | 9.5 | 56,532 | 0.44 | 0.22 |
-| std | 4.04 | 5.19 | 23,679 | 0.5 | 0.42 |
-| min | 2012.0 | 1.0 | 10,241 | 0.0 | 0.0 |
-| 25% | 2015.0 | 5.0 | 40,268 | 0.0 | 0.0 |
-| 50% | 2018.5 | 9.5 | 54,872 | 0.0 | 0.0 |
-| 75% | 2022.0 | 14.0 | 72,674 | 1.0 | 0.0 |
-| max | 2025.0 | 18.0 | 112,491 | 1.0 | 1.0 |
+| Statistic | membership | finals | top4 |
+|-----------|------------|--------|------|
+| count | 252 | 252.0 | 252.0 |
+| mean | 56,532 | 0.44 | 0.22 |
+| std | 23,679 | 0.5 | 0.42 |
+| min | 10,241 | 0.0 | 0.0 |
+| 25% | 40,268 | 0.0 | 0.0 |
+| 50% | 54,872 | 0.0 | 0.0 |
+| 75% | 72,674 | 1.0 | 0.0 |
+| max | 112,491 | 1.0 | 1.0 |
 
 ### Membership Statistics
 - **Average Membership**: 56,532
@@ -104,16 +104,16 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 | Sydney | 54,683 | 29,873 | 78,671 | 13,657 |
 | Port Adelaide | 53,952 | 35,543 | 72,656 | 9,795 |
 | Melbourne | 48,118 | 33,177 | 70,785 | 12,929 |
-| St Kilda | 46,558 | 30,739 | 65,509 | 12,016 |
+| St Kilda | 46,558 | 30,007 | 65,509 | 10,033 |
 | Western Bulldogs | 45,234 | 30,007 | 76,584 | 13,190 |
-| North Melbourne | 43,527 | 33,423 | 56,731 | 6,652 |
+| North Melbourne | 43,527 | 30,007 | 67,731 | 11,033 |
 | Brisbane | 35,546 | 20,762 | 75,138 | 17,383 |
-| G.Western Sydney | 24,436 | 10,241 | 37,754 | 9,840 |
+| G.Western Sydney | 24,436 | 10,241 | 43,527 | 9,033 |
 | Gold Coast | 16,989 | 11,204 | 30,107 | 6,080 |
 
 ### Key Insights
 - There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)
-- Teams that make finals have ~11% higher average membership than those that miss finals
-- Top 4 teams have ~15% higher average membership than teams that miss finals
+- Teams that make finals have ~8% higher average membership than those that miss finals
+- Top 4 teams have ~18% higher average membership than teams that miss finals
 - Richmond and Collingwood consistently have the highest membership numbers
 - Gold Coast has the lowest average membership across the period
