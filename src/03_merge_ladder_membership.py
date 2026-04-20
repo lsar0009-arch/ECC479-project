@@ -7,6 +7,16 @@ membership_clean = pd.read_csv("data/clean/membership_clean.csv")
 # --- Clean club names ---
 ladder_raw.index = ladder_raw.index.str.strip()
 
+# --- Standardize team names ---
+name_mapping = {
+    "GWS": "G.Western Sydney",
+    "North Melbounre": "North Melbourne",
+    "St. Kilda": "St Kilda"
+}
+
+ladder_raw.index = ladder_raw.index.map(lambda x: name_mapping.get(x, x))
+membership_clean['club'] = membership_clean['club'].map(lambda x: name_mapping.get(x, x))
+
 # --- Transform ladder_raw from wide to long ---
 ladder_long = ladder_raw.melt(ignore_index=False, var_name="year", value_name="ladder_position").reset_index()
 ladder_long.columns = ["club", "year", "ladder_position"]
