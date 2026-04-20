@@ -49,16 +49,16 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 ### Descriptive Statistics
 
 #### Numeric Variables
-| Statistic | membership | finals | top4 |
-|-----------|------------|--------|------|
-| count | 252 | 252.0 | 252.0 |
-| mean | 56,532 | 0.44 | 0.22 |
-| std | 23,679 | 0.5 | 0.42 |
-| min | 10,241 | 0.0 | 0.0 |
-| 25% | 40,268 | 0.0 | 0.0 |
-| 50% | 54,872 | 0.0 | 0.0 |
-| 75% | 72,674 | 1.0 | 0.0 |
-| max | 112,491 | 1.0 | 1.0 |
+| Statistic | membership |
+|-----------|------------|
+| count | 252 |
+| mean | 56,532 |
+| std | 23,679 |
+| min | 10,241 |
+| 25% | 40,268 |
+| 50% | 54,872 |
+| 75% | 72,674 |
+| max | 112,491 |
 
 ### Membership Statistics
 - **Average Membership**: 56,532
