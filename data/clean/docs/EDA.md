@@ -128,3 +128,48 @@ The dataset is clean, complete, and structured for causal comparison. Membership
 
 2.1 Correlation Matrix
 
+2.2 Visual Exploration
+
+Scatterplot: Membership vs Ladder Position
+
+Boxplot: Membership by Finals Qualification
+
+Histogram: Membership Distribution
+
+
+
+
+3. First‑Order Effect Check (Treatment vs Control)
+3.1 Group Means
+
+3.2 Difference in Means
+
+
+4. Modelling Considerations
+
+4.1 Potential Issues
+- Club fixed effects: large clubs dominate membership totals
+- Year trends: membership has grown over time
+- Non‑linearity: ladder position effect may not be linear
+- Simpson’s paradox risk: large clubs may mask threshold effects
+- Variance differences: membership variance differs by club
+
+4.2 Possible Solutions
+- Use within‑club comparisons
+- Include year fixed effects
+- Consider log(membership) to stabilise variance
+- Use regression discontinuity logic around the 8th‑place cutoff
+
+
+5. Summary of Insights
+The dataset is clean, complete, and suitable for threshold‑based causal analysis.
+
+Finals qualification correlates positively with membership, but raw correlations are confounded.
+
+Visuals show a plausible finals effect but also strong club‑specific patterns.
+
+A small first‑order difference exists between treatment and control groups.
+
+Modelling should account for club size, year trends, and non‑linearities.
+
+Overall, the EDA supports the hypothesis that crossing the finals threshold may influence membership, but careful modelling is required to isolate the causal effect.
