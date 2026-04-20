@@ -37,4 +37,21 @@ import pandas as pd
 df = pd.read_csv("../data/clean/merged_data_2012_2025.csv")
 
 df.head()
+# Summary statistics for all numeric variables
+df.describe()
 
+# Check for missing values
+df.isna().sum()
+
+# Summary statistics for membership specifically
+df['membership_total'].describe()
+
+
+# Optional: histogram of membership totals
+import matplotlib.pyplot as plt
+
+df['membership_total'].hist(bins=20)
+plt.xlabel("Membership Total")
+plt.ylabel("Frequency")
+plt.title("Distribution of AFL Club Membership Totals")
+plt.show()
