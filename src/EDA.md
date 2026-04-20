@@ -15,6 +15,9 @@ Columns:
 
 
 1.3: Variables included
+
+Key variables (full definitions in data/clean/docs/codebook.md):
+
 - team — AFL club name
 - year — season year
 - ladder_position — final ladder rank (1 = best, 18 = worst)
