@@ -1,3 +1,31 @@
+1. Data Overview
+1.1 Dataset Description
+
+The merged dataset contains AFL club‑year observations from 2012–2025, combining:
+- Ladder data (final finishing positions)
+- Membership data (annual club membership totals)
+- Derived variables (finals qualification, treatment/control groups)
+Each row represents a club in a given season.
+
+
+1.2 Dimensions
+
+- Rows: 18 clubs × 14 seasons = 252 observations (minus any missing years)
+- Columns: depends on your final merged dataset, typically 6–10 variables
+
+1.3 Variables Included
+Key variables (full definitions in data/clean/docs/codebook.md):
+
+- team — AFL club name
+- year — season year
+- ladder_position — final ladder rank (1 = best, 18 = worst)
+- membership_total — total club membership
+- finals_qualified — 1 if ladder_position ≤ 8
+- treatment_group — 1 if finishing 6th–8th
+- control_group — 1 if finishing 9th–10th
+- membership_change — year‑to‑year change
+- membership_growth_rate — percentage change
+
 # Exploratory Data Analysis (EDA)
 ## Merged Dataset Summary Statistics
 
