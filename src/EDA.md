@@ -27,3 +27,14 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 - control_group — 1 if finishing 9th–10th
 - membership_change — year‑to‑year change
 - membership_growth_rate — percentage change
+
+
+1.4 Summary of Statistics
+
+import pandas as pd
+
+# Load your merged analysis-ready dataset
+df = pd.read_csv("../data/clean/merged_data_2012_2025.csv")
+
+df.head()
+
