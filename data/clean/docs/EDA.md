@@ -117,3 +117,14 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 - Top 4 teams have ~18% higher average membership than teams that miss finals
 - Richmond and Collingwood consistently have the highest membership numbers
 - Gold Coast has the lowest average membership across the period
+
+
+The dataset is clean, complete, and structured for causal comparison. Membership varies widely across clubs, suggesting strong club‑specific effects. Ladder positions are evenly distributed, and finals qualification is balanced enough to support threshold‑based comparisons.
+
+
+
+2. Exploratory Analysis of Relationships
+
+
+2.1 Correlation Matrix
+
