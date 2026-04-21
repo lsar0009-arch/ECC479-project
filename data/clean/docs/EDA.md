@@ -111,6 +111,28 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 | G.Western Sydney | 24,436 | 10,241 | 43,527 | 9,033 |
 | Gold Coast | 16,989 | 11,204 | 30,107 | 6,080 |
 
+### Membership Growth Rate by Ladder Position (2012-2025)
+| Ladder Position | Avg Growth Rate (%) | Median Growth Rate (%) | Std Dev (%) | Observations | Avg Membership |
+|---|---|---|---|---|---|
+| 1 | 10.07 | 6.06 | 12.68 | 13 | 66,718 |
+| 2 | 12.18 | 8.47 | 9.02 | 13 | 57,758 |
+| 3 | 6.22 | 3.33 | 6.73 | 13 | 72,624 |
+| 4 | 14.97 | 12.87 | 12.91 | 13 | 58,185 |
+| 5 | 9.97 | 11.42 | 7.26 | 13 | 63,152 |
+| 6 | 10.82 | 8.25 | 9.73 | 13 | 55,261 |
+| 7 | 5.56 | 3.87 | 9.68 | 13 | 49,773 |
+| 8 | 8.66 | 9.62 | 8.14 | 13 | 68,014 |
+| 9 | 6.45 | 7.89 | 11.11 | 13 | 65,406 |
+| 10 | 6.34 | 4.33 | 7.39 | 13 | 53,628 |
+| 11 | 3.06 | 1.17 | 6.12 | 13 | 62,376 |
+| 12 | 5.66 | 4.64 | 6.60 | 13 | 58,151 |
+| 13 | 0.90 | 1.66 | 10.59 | 13 | 62,647 |
+| 14 | 4.45 | 5.29 | 8.82 | 14 | 46,010 |
+| 15 | 1.37 | 1.14 | 6.54 | 12 | 53,094 |
+| 16 | 3.06 | 1.22 | 10.63 | 13 | 47,192 |
+| 17 | 1.48 | 3.72 | 8.47 | 13 | 48,239 |
+| 18 | 3.03 | 0.37 | 11.34 | 13 | 53,686 |
+
 ### Key Insights
 - There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)
 - Teams that make finals have ~8% higher average membership than those that miss finals
