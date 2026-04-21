@@ -171,9 +171,9 @@ Among lower-performing teams, membership decreases as ladder position worsens. T
 5. Full data set 
 Across all ladder positions, better performance correlates with higher membership. The coefficient of -959 indicates membership decreases by about 959 for each worse ladder position, representing a statistically significant relationship (p<0.001).
 
-6. Discointinuous Regression (Top 4 to 5-8)
+6. Discointinuous Regression (Top 4 to 5-8) - TBC
 
-7. Discointinuous Regression (5-8 to 9-10)
+7. Discointinuous Regression (5-8 to 9-10) - TBC
 
 
 
