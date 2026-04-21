@@ -173,7 +173,7 @@ Across all ladder positions, better performance correlates with higher membershi
 
 
 
-### Key Insights
+### Overall Key Insights
 - There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)
 - Teams that make finals have ~8% higher average membership than those that miss finals
 - Top 4 teams have ~18% higher average membership than teams that miss finals
