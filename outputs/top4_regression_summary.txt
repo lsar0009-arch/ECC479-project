@@ -1,0 +1,34 @@
+Linear Regression: Membership ~ Ladder Position (Top 4 Teams)
+============================================================
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             membership   R-squared:                       0.002
+Model:                            OLS   Adj. R-squared:                 -0.017
+Method:                 Least Squares   F-statistic:                   0.08479
+Date:                Tue, 21 Apr 2026   Prob (F-statistic):              0.772
+Time:                        12:18:33   Log-Likelihood:                -639.34
+No. Observations:                  56   AIC:                             1283.
+Df Residuals:                      54   BIC:                             1287.
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept        6.515e+04   7017.538      9.283      0.000    5.14e+04    7.89e+04
+ladder_position  -858.1143   2946.867     -0.291      0.771   -6633.868    4917.639
+==============================================================================
+Omnibus:                        0.696   Durbin-Watson:                   1.829
+Prob(Omnibus):                  0.706   Jarque-Bera (JB):                0.806
+Skew:                           0.226   Prob(JB):                        0.668
+Kurtosis:                       2.624   Cond. No.                         7.47
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+Key Statistics:
+R-squared: 0.0019
+Coefficient: -858.11
+P-value: 0.7709
+Observations: 56
