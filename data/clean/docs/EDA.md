@@ -136,13 +136,19 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 
 ### Membership vs Ladder Position Visualizations
 
-#### Scatterplot 1: Membership vs Ladder Position (2012-2025)
+#### Regression 1: Membership vs Ladder Position (2012-2025)
 - outputs/membership_vs_ladder_position_2012_2025.png
 
-#### Scatterplot 2: Membership vs Ladder Position by Finals Status
-- outputs/membership_vs_ladder_by_finals.png
+#### Regression 2: Membership Growth Rate by Ladder Position (Top 4)
+- outputs/membership_growth_by_position_scatter.png
 
-#### Scatterplot 3: Membership Growth Rate by Ladder Position
+#### Regression 3: Membership Growth Rate by Ladder Position (9-10)
+- outputs/membership_growth_by_position_scatter.png
+
+#### Regression 4: Membership Growth Rate by Ladder Position (11-18)
+- outputs/membership_growth_by_position_scatter.png
+
+#### Bar Chart 1: Membership Growth Rate by Ladder Position
 - outputs/membership_growth_by_position_scatter.png
 
 ### Key Insights
