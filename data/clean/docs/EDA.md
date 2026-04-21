@@ -133,7 +133,17 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 | 17 | 1.48 | 3.72 | 8.47 | 13 | 48,239 |
 | 18 | 3.03 | 0.37 | 11.34 | 13 | 53,686 |
 
+### Membership vs Ladder Position Visualizations
 
+#### Scatterplot 1: Year-by-Year Distribution
+![Membership vs Ladder Position (2012-2025)](../../outputs/membership_vs_ladder_position_2012_2025.png)
+
+*Each colored point represents a club-year observation. The red dashed line shows the polynomial trend. Clear inverse relationship: better ladder positions tend to have higher membership.*
+
+#### Scatterplot 2: By Finals Qualification Status
+![Membership vs Ladder by Finals Status](../../outputs/membership_vs_ladder_by_finals.png)
+
+*Green points = Made Finals (positions 1-8); Red points = Missed Finals (positions 9-18). Blue dashed line shows linear trend. Teams that make finals consistently have higher memberships across all ladder positions.*
 
 ### Key Insights
 - There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)
