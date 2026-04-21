@@ -77,8 +77,8 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 
 #### Correlations
 - **Ladder Position vs Membership**: -0.2104 (negative = better position correlates with higher membership)
-- **Finals vs Membership**: 0.1491
-- **Top 4 vs Membership**: 0.1464
+- **Finals vs Membership**: 0.1491 (This is a weak positive correlation indicating that clubs which make finals (positions 1-8) tend to have slightly higher membership than those that miss finals. However, the correlation is small (around 0.15), so it's not a strong relationship. Essentially, making finals is weakly associated with having more members, but many other factors influence membership.)
+- **Top 4 vs Membership**: 0.1464 (Similar weak positive correlation for teams finishing in the top 4. These clubs have modestly higher membership on average, but again, it's a weak effect)
 
 #### Average Membership by Performance Group
 | Performance Group | Count | Average Membership | Median Membership |
