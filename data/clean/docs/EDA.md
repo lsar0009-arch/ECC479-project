@@ -137,26 +137,51 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 ### Membership vs Ladder Position Visualizations
 
 #### Regression 1: Membership vs Ladder Position (2012-2025)
-- outputs/membership_vs_ladder_position_2012_2025.png
+- outputs/full_regression_plot.png
 
 #### Regression 2: Membership Growth Rate by Ladder Position (Top 4)
-- outputs/membership_growth_by_position_scatter.png
+- outputs/top_4_regression_plot.png
+
+#### Regression 3: Membership Growth Rate by Ladder Position (5-8)
+- outputs/finals_5_8_regression_plot.png
 
 #### Regression 3: Membership Growth Rate by Ladder Position (9-10)
-- outputs/membership_growth_by_position_scatter.png
+- outputs/finals_9_10_regression_plot.png
 
 #### Regression 4: Membership Growth Rate by Ladder Position (11-18)
-- outputs/membership_growth_by_position_scatter.png
+- outputs/finals_11_18_regression_plot.png
 
 #### Bar Chart 1: Membership Growth Rate by Ladder Position
-- outputs/membership_growth_by_position_scatter.png
+- outputs/membership_growth_rate_by_position.png
+
+### Key Regressionm Insights
+
+1. Top 4
+The regression shows no significant relationship between ladder position and membership within the top 4 teams. The coefficient of -858 indicates that membership decreases by about 858 for each position drop from 1st to 4th, but this effect is not statistically significant (p=0.77).
+
+2. Ladder Positions 5-8
+Within positions 5-8, there's virtually no relationship between ladder position and membership. The positive coefficient of 351 suggests membership increases slightly by 351 when moving from 5th to 8th place, but this is not statistically significant (p=0.89).
+
+3. Ladder Positions 9-10 (just missing out on finals)
+Teams finishing 9th tend to have higher membership than those finishing 10th. The coefficient of -10,223 indicates membership decreases by about 10,223 when dropping from 9th to 10th place, though this difference is not statistically significant (p=0.19).
+
+4. Ladder Positions 11-18
+Among lower-performing teams, membership decreases as ladder position worsens. The coefficient of -2,018 shows membership falls by about 2,018 for each position drop from 11th to 18th, with marginal statistical significance (p=0.08).
+
+5. Full data set 
+Across all ladder positions, better performance correlates with higher membership. The coefficient of -959 indicates membership decreases by about 959 for each worse ladder position, representing a statistically significant relationship (p<0.001).
+
+
 
 ### Key Insights
 - There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)
 - Teams that make finals have ~8% higher average membership than those that miss finals
 - Top 4 teams have ~18% higher average membership than teams that miss finals
-- Richmond and Collingwood consistently have the highest membership numbers
-- Gold Coast has the lowest average membership across the period
+
+Teams differ substantially in scale:
+- Richmond, Collingwood, West Coast: 80k–110k
+- Brisbane, North Melbourne, St Kilda: 30k–50k
+- Gold Coast: consistently lowest
 
 
 The dataset is clean, complete, and structured for causal comparison. Membership varies widely across clubs, suggesting strong club‑specific effects. Ladder positions are evenly distributed, and finals qualification is balanced enough to support threshold‑based comparisons.
