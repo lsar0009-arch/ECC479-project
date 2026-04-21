@@ -46,6 +46,8 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 | finals | int64 | Made finals (1=yes, 0=no) |
 | top4 | int64 | Finished top 4 (1=yes, 0=no) |
 
+The dataset is complete, clean, and balanced across seasons, meaning no imputation or reconstruction is required. This supports causal‑style comparisons (e.g., finals vs non‑finals) without concerns about missingness bias.
+
 ### Descriptive Statistics
 
 #### Numeric Variables
@@ -67,11 +69,15 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 - **Minimum**: 10,241
 - **Maximum**: 112,491
 
+Membership varies widely across clubs, with a spread of over 100k between smallest and largest clubs. This indicates strong club‑specific effects that must be accounted for in modelling (e.g., fixed effects or differencing).
+
 ### Performance Statistics
 - **Average Ladder Position**: 9.50
 - **Median Ladder Position**: 10
 - **Teams Making Finals**: 112 out of 252 (44.4%)
 - **Teams Finishing Top 4**: 56 out of 252 (22.2%)
+
+Performance is evenly distributed across the ladder, with a natural split between finals and non‑finals teams. This supports threshold‑based comparisons (e.g., regression discontinuity around 8th place).
 
 ### Performance vs Membership Analysis
 
