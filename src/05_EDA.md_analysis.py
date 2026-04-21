@@ -83,10 +83,5 @@ for team, row in team_stats.iterrows():
     print(f"| {team} | {row['mean']:,.0f} | {row['min']:,.0f} | {row['max']:,.0f} | {row['std']:,.0f} |")
 print()
 
-print("### Key Insights")
-print("- There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)")
-print("- Teams that make finals have ~11% higher average membership than those that miss finals")
-print("- Top 4 teams have ~15% higher average membership than teams that miss finals")
-print("- Richmond and Collingwood consistently have the highest membership numbers")
-print("- Gold Coast has the lowest average membership across the period")
+
 
