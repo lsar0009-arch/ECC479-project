@@ -46,7 +46,7 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 | finals | int64 | Made finals (1=yes, 0=no) |
 | top4 | int64 | Finished top 4 (1=yes, 0=no) |
 
-The dataset is complete, clean, and balanced across seasons, meaning no imputation or reconstruction is required. This supports causal‑style comparisons (e.g., finals vs non‑finals) without concerns about missingness bias.
+The dataset is clean, complete, and structured for causal comparison. Membership varies widely across clubs, suggesting strong club‑specific effects. Ladder positions are evenly distributed, and finals qualification is balanced enough to support threshold‑based comparisons.
 
 ### Descriptive Statistics
 
@@ -197,7 +197,7 @@ Teams differ substantially in scale:
 
 Therefore, club identity is a major determinant of membership levels
 
-The dataset is clean, complete, and structured for causal comparison. Membership varies widely across clubs, suggesting strong club‑specific effects. Ladder positions are evenly distributed, and finals qualification is balanced enough to support threshold‑based comparisons.
+
 
 
 
