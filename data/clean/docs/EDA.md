@@ -133,11 +133,7 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 | 17 | 1.48 | 3.72 | 8.47 | 13 | 48,239 |
 | 18 | 3.03 | 0.37 | 11.34 | 13 | 53,686 |
 
-### Membership Growth Rate Visualization
 
-![Membership Growth by Ladder Position](../../outputs/membership_growth_by_position_scatter.png)
-
-*Figure: Scatter plot showing membership growth rate by ladder position. Blue dots represent individual year-to-year growth observations; red line shows mean growth rate for each position. Clear positive trend: top finishers (positions 1-4) average 10-15% growth, while lower-ladder teams (13-18) average near 0-1% growth.*
 
 ### Key Insights
 - There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)
