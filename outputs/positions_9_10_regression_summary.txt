@@ -1,0 +1,34 @@
+Linear Regression: Membership ~ Ladder Position (Positions 9-10)
+=================================================================
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             membership   R-squared:                       0.066
+Model:                            OLS   Adj. R-squared:                  0.030
+Method:                 Least Squares   F-statistic:                     1.702
+Date:                Tue, 21 Apr 2026   Prob (F-statistic):              0.203
+Time:                        17:05:57   Log-Likelihood:                -315.96
+No. Observations:                  28   AIC:                             635.9
+Df Residuals:                      26   BIC:                             638.6
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept        1.553e+05   7.69e+04      2.020      0.043    4586.342    3.06e+05
+ladder_position -1.022e+04   7836.082     -1.305      0.192   -2.56e+04    5135.296
+==============================================================================
+Omnibus:                        3.293   Durbin-Watson:                   1.225
+Prob(Omnibus):                  0.193   Jarque-Bera (JB):                2.393
+Skew:                           0.716   Prob(JB):                        0.302
+Kurtosis:                       3.032   Cond. No.                         183.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+Key Statistics:
+R-squared: 0.0659
+Coefficient: -10223.14
+P-value: 0.1920
+Observations: 28

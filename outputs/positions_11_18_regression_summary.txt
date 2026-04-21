@@ -1,0 +1,34 @@
+Linear Regression: Membership ~ Ladder Position (Positions 11-18)
+=================================================================
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             membership   R-squared:                       0.032
+Model:                            OLS   Adj. R-squared:                  0.023
+Method:                 Least Squares   F-statistic:                     3.044
+Date:                Tue, 21 Apr 2026   Prob (F-statistic):             0.0838
+Time:                        17:08:10   Log-Likelihood:                -1295.5
+No. Observations:                 112   AIC:                             2595.
+Df Residuals:                     110   BIC:                             2600.
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept        8.143e+04   1.64e+04      4.972      0.000    4.93e+04    1.14e+05
+ladder_position -2018.1154   1156.703     -1.745      0.081   -4285.212     248.981
+==============================================================================
+Omnibus:                        3.492   Durbin-Watson:                   1.320
+Prob(Omnibus):                  0.175   Jarque-Bera (JB):                3.438
+Skew:                           0.383   Prob(JB):                        0.179
+Kurtosis:                       2.614   Cond. No.                         94.4
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+Key Statistics:
+R-squared: 0.0318
+Coefficient: -2018.12
+P-value: 0.0810
+Observations: 112
