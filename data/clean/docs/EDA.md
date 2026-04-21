@@ -154,7 +154,7 @@ Key variables (full definitions in data/clean/docs/codebook.md):
 #### Bar Chart 1: Membership Growth Rate by Ladder Position
 - outputs/membership_growth_rate_by_position.png
 
-### Key Regressionm Insights
+### Key Regression Insights
 
 1. Top 4
 The regression shows no significant relationship between ladder position and membership within the top 4 teams. The coefficient of -858 indicates that membership decreases by about 858 for each position drop from 1st to 4th, but this effect is not statistically significant (p=0.77).
@@ -171,18 +171,25 @@ Among lower-performing teams, membership decreases as ladder position worsens. T
 5. Full data set 
 Across all ladder positions, better performance correlates with higher membership. The coefficient of -959 indicates membership decreases by about 959 for each worse ladder position, representing a statistically significant relationship (p<0.001).
 
+6. Discointinuous Regression (Top 4 to 5-8)
+
+7. Discointinuous Regression (5-8 to 9-10)
+
 
 
 ### Overall Key Insights
 - There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)
-- Teams that make finals have ~8% higher average membership than those that miss finals
+- Finals teams have modestly higher membership (~8% higher on average). This is a weak first‑order effect, indicating that making finals matters, but not dramatically.
 - Top 4 teams have ~18% higher average membership than teams that miss finals
+- A weak negative relationship: better ladder position is associated with slightly higher membership. The effect is small, suggesting performance is not the dominant driver of membership.
+- Growth is highest for positions 2, 4, 6 (8–15%) and is lowest for positions 13–17 (0–4%)
 
 Teams differ substantially in scale:
 - Richmond, Collingwood, West Coast: 80k–110k
 - Brisbane, North Melbourne, St Kilda: 30k–50k
 - Gold Coast: consistently lowest
 
+Therefore, club identity is a major determinant of membership levels
 
 The dataset is clean, complete, and structured for causal comparison. Membership varies widely across clubs, suggesting strong club‑specific effects. Ladder positions are evenly distributed, and finals qualification is balanced enough to support threshold‑based comparisons.
 
