@@ -1,0 +1,20 @@
+Declaration  
+Descriptive vs causal.
+
+Econometric specification  
+Functional form, regressors, sample, error structure, justification.
+
+Identification strategy (if causal)
+OLS-with-controls, FE, DiD, RDD, etc., plus required assumptions.
+
+Regression table  
+Clean, formatted, not raw software output.
+
+Interpretation  
+Direction, magnitude, units, what is held constant.
+
+Threats / limitations  
+OVB, selection, reverse causality, measurement, sample selection.
+
+Reproducibility  
+Pipeline: raw → clean → analysis → results.
