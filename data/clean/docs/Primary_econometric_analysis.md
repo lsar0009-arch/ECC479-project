@@ -27,6 +27,10 @@ The main specification restricts the sample to clubs finishing between 6th and 1
 Error structure  
 Standard errors are clustered at the club level to allow for arbitrary serial correlation and heteroskedasticity within clubs over time.
 
+- Arbitrary serial correlation: The residuals for a given club may move together over time in any way, and we make no assumptions about the structure of that correlation.
+- Heteroskedasticity: the spread of the residuals changes depending on the value of the predictors or across groups.
+
+
 Brief justification  
 A linear fixed‑effects model is appropriate because the outcome (membership totals) is continuous and we are interested in an average treatment effect of finals qualification. Club fixed effects control for time‑invariant differences across clubs, while year fixed effects absorb common shocks. Restricting the sample to 6th–10th placed clubs approximates a quasi‑experimental comparison around the finals cutoff, supporting a causal interpretation of 𝛽 as the effect of crossing the finals qualification threshold on subsequent membership.
 
