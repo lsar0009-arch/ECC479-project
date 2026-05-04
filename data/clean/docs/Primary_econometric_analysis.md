@@ -4,20 +4,33 @@ This is a causal analysis.
 I aim to estimate the causal effect of crossing the AFL finals qualification threshold on subsequent club membership tallies. Clubs finishing just inside the cutoff (6th–8th) are compared with clubs finishing just outside it (9th–10th). This design treats finals qualification as a treatment and uses near‑threshold comparisons to approximate a quasi‑experimental setting.
 
 
-Econometric specification  
+## Econometric specification  
 Functional form, regressors, sample, error structure, justification.
 
-Identification strategy (if causal)
+
+
+
+## Identification strategy (if causal)
 OLS-with-controls, FE, DiD, RDD, etc., plus required assumptions.
 
-Regression table  
+
+
+## Regression table  
 Clean, formatted, not raw software output.
 
-Interpretation  
+
+
+## Interpretation  
 Direction, magnitude, units, what is held constant.
 
-Threats / limitations  
+
+
+
+## Threats / limitations  
 OVB, selection, reverse causality, measurement, sample selection.
 
-Reproducibility  
+
+
+
+## Reproducibility  
 Pipeline: raw → clean → analysis → results.
