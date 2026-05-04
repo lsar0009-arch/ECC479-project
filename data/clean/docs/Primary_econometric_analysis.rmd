@@ -1,5 +1,8 @@
 Declaration  
-Descriptive vs causal.
+
+This is a causal analysis.  
+I aim to estimate the causal effect of crossing the AFL finals qualification threshold on subsequent club membership tallies. Clubs finishing just inside the cutoff (6th–8th) are compared with clubs finishing just outside it (9th–10th). This design treats finals qualification as a treatment and uses near‑threshold comparisons to approximate a quasi‑experimental setting.
+
 
 Econometric specification  
 Functional form, regressors, sample, error structure, justification.
