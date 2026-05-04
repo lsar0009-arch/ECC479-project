@@ -21,7 +21,14 @@ Qualified𝑖𝑡−1: Indicator equal to 1 if club 𝑖 qualified for finals in
 
 𝜆𝑡: Year fixed effects, capturing league‑wide shocks (rule changes, macro conditions, AFL‑wide membership trends).
 
+Sample  
+The main specification restricts the sample to clubs finishing between 6th and 10th on the ladder in a given year. This focuses on teams near the finals threshold, improving comparability between treated (6th–8th) and control (9th–10th) clubs and aligning with the causal interpretation of a near‑cutoff design.
 
+Error structure  
+Standard errors are clustered at the club level to allow for arbitrary serial correlation and heteroskedasticity within clubs over time.
+
+Brief justification  
+A linear fixed‑effects model is appropriate because the outcome (membership totals) is continuous and we are interested in an average treatment effect of finals qualification. Club fixed effects control for time‑invariant differences across clubs, while year fixed effects absorb common shocks. Restricting the sample to 6th–10th placed clubs approximates a quasi‑experimental comparison around the finals cutoff, supporting a causal interpretation of 𝛽 as the effect of crossing the finals qualification threshold on subsequent membership.
 
 
 ## Identification strategy (if causal)
