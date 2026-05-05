@@ -78,6 +78,7 @@ Meaning
 Across the full league, better‑performing teams tend to have higher membership — but the effect is small (R² = 0.044). Performance explains only ~4% of membership variation.
 
 
+
 ## Model: Membership ~ Ladder Position (positions 1–4 only)
 
 Interpretation
@@ -94,6 +95,8 @@ Holding constant: Nothing — simple OLS with HC3 robust errors.
 Meaning
 Among top‑performing clubs, ladder position has no meaningful relationship with membership. These clubs already have large, stable supporter bases.
 
+
+
 ## Model: Membership ~ Ladder Position (positions 5–8 only)
 
 Interpretation
@@ -107,6 +110,7 @@ Significance: Not significant (p = 0.890). This is pure noise; the model explain
 
 Holding constant: Nothing is held constant — this is a simple bivariate OLS with HC3 robust errors.
 
+
 ## Model: Membership ~ Ladder Position (positions 9–10 only)
 
 Interpretation
@@ -118,12 +122,13 @@ Units: Members per ladder position.
 
 Significance: Not significant (p = 0.192).
 
-## Holding constant: Nothing — simple OLS with HC3 robust errors.
+Holding constant: Nothing — simple OLS with HC3 robust errors.
 
 Meaning
 Among clubs finishing 9th–10th, there is no statistically reliable relationship between ladder position and membership. The large coefficient is unstable due to the tiny sample (28 obs).
 
-Model: Membership ~ Ladder Position (positions 11–18 only)
+
+## Model: Membership ~ Ladder Position (positions 11–18 only)
 
 Interpretation
 Direction: The coefficient is negative (–2,018), meaning worse ladder positions are associated with lower membership.
