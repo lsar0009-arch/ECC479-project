@@ -64,15 +64,29 @@ data/
   - membership_1984-2024_website.csv
   - membership_2025_raw.csv
 
-- clean/                     
+- clean/
+  - docs
+    - codebook.md
+    - EDA.md
+    - primary_econometric_analysis.md                     
   - membership_clean.csv
   - merged_data_2012_2025.csv
 
-docs/
-- codebook.md
+                         
+outputs/            
+- finals_5_8_regression_plot.png
+- finals_5_8_regression_summary.txt  
+- full_regression_plot.png         
+- full_regression_summary.txt
+- membership_growth_rate_by_position.png
+- membership_growth_rate_trend.png
+- positions_9_10_regression_plot.png
+- positions_9_10_regression_summary.txt
+- positions_11_18_regression_plot.png
+- positions_11_18_regression_summary.txt
+- top4_regression_plot.png
+- top4_regression_summary.txt
 
-docs/                          
-outputs/                       
 
 src/                           
 - 00_import_afl_members.py
@@ -80,6 +94,8 @@ src/
 - 02_clean_ladder_positions.py
 - 03_merge_ladder_membership.py
 - 04_analysis.py
+- 05_EDA.md_analysis.py
+- 06_regressions_visuals.py
 README.md
 
 
