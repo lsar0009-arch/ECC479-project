@@ -59,7 +59,7 @@ Together, these features make conditional exogeneity credible.
 
 
 
-## Regression table  
+## Regression table and its interpretation  
 
 ## Model: Membership ~ Ladder Position (full sample)
 
