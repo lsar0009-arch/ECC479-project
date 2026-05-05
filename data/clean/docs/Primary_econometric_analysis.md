@@ -178,6 +178,3 @@ AFL membership definitions vary slightly across clubs and years.
 
 
 
-
-## Reproducibility  
-Pipeline: raw → clean → analysis → results.
