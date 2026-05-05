@@ -126,11 +126,11 @@ How to Run the Project From Scratch
 
 3. Run the scripts in order.
 
-- 00_import_afl_members.py
+- 01_import_afl_members.py
 - 01_clean_memberships.py
-- 02_clean_ladder_positions.py
 - 03_merge_ladder_membership.py
-- 04_analysis.py
+- 04_EDA.md_analysis.py
+- 05_regressions_visuals.py
 
 - Cleaned datasets will appear in data/clean/.
 
