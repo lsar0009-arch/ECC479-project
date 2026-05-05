@@ -111,7 +111,6 @@ This project uses Python and several scientific computing libraries.
 The full list of dependencies is stored in `requirements.txt`.  
 Install them with:
 
-```bash
 pip install -r requirements.txt
 
 
