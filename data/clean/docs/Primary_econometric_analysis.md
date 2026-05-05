@@ -63,6 +63,14 @@ Together, these features make conditional exogeneity credible.
 
 ## Model: Membership ~ Ladder Position (full sample)
 
+Coefficient: –958.90
+
+Standard error: (302.06)
+
+N: 252
+
+R²: 0.0443
+
 Interpretation
 Direction: The coefficient is negative (–958.90), meaning worse ladder positions are associated with lower membership.
 
@@ -80,6 +88,14 @@ Across the full league, better‑performing teams tend to have higher membership
 
 
 ## Model: Membership ~ Ladder Position (positions 1–4 only)
+
+Coefficient: –858.11
+
+Standard error: (2,946.87)
+
+N: 56
+
+R²: 0.0019
 
 Interpretation
 Direction: The coefficient is negative (–858), meaning worse ladder positions are associated with lower membership.
@@ -99,6 +115,14 @@ Among top‑performing clubs, ladder position has no meaningful relationship wit
 
 ## Model: Membership ~ Ladder Position (positions 5–8 only)
 
+Coefficient: +350.77
+
+Standard error: (2,535.27)
+
+N: 56
+
+R²: 0.0004
+
 Interpretation
 Direction: The coefficient on ladder position is positive (+350.77), meaning that worse ladder positions (higher numbers) are associated with slightly higher membership — but this is almost certainly noise.
 
@@ -112,6 +136,14 @@ Holding constant: Nothing is held constant — this is a simple bivariate OLS wi
 
 
 ## Model: Membership ~ Ladder Position (positions 9–10 only)
+
+Coefficient: –10,223.14
+
+Standard error: (7,836.08)
+
+N: 28
+
+R²: 0.0659
 
 Interpretation
 Direction: The coefficient is negative (–10,223), meaning worse ladder positions are associated with lower membership.
@@ -129,6 +161,14 @@ Among clubs finishing 9th–10th, there is no statistically reliable relationshi
 
 
 ## Model: Membership ~ Ladder Position (positions 11–18 only)
+
+Coefficient: –2,018.12
+
+Standard error: (1,156.70)
+
+N: 112
+
+R²: 0.0318
 
 Interpretation
 Direction: The coefficient is negative (–2,018), meaning worse ladder positions are associated with lower membership.
