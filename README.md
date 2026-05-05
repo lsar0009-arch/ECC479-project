@@ -156,10 +156,11 @@ Cleans the raw membership data from years 2012 to 2025  and outputs a cleaned CS
 Merges the cleaned membership and ladder datasets into a single analysis‑ready file.
 
 04_EDA.md_analysis.py
-
+This script loads the merged dataset, computes summary statistics, checks distributions and correlations, and produces Markdown‑ready outputs for inclusion in the EDA report. It ensures that all descriptive analysis is fully reproducible and not done manually.
 
 05_regressions_visuals.py
-
+Runs all regression specifications and generates the associated visualisations.
+This script loads the cleaned/merged data, estimates the OLS models for each ladder‑position band saves regression summaries to the outputs/ directory, and produces scatterplots and fitted‑line visuals for each specification.
 
 
 
