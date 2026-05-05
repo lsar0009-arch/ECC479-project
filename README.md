@@ -99,20 +99,19 @@ src/
 README.md
 
 
-
-
-
 ## Software Requirements
-- Python 3.14.3
-- Required packages:
-  - pip
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - statsmodels
 
-Install all packages with:
+
+This project uses Python and several scientific computing libraries.
+
+**Python version**
+- Python 3.14.3
+
+**Required packages**
+The full list of dependencies is stored in `requirements.txt`.  
+Install them with:
+
+```bash
 pip install -r requirements.txt
 
 
