@@ -35,8 +35,27 @@ Brief justification
 A linear fixed‑effects model is appropriate because the outcome (membership totals) is continuous and we are interested in an average treatment effect of finals qualification. Club fixed effects control for time‑invariant differences across clubs, while year fixed effects absorb common shocks. Restricting the sample to 6th–10th placed clubs approximates a quasi‑experimental comparison around the finals cutoff, supporting a causal interpretation of 𝛽 as the effect of crossing the finals qualification threshold on subsequent membership.
 
 
-## Identification strategy (if causal)
-OLS-with-controls, FE, DiD, RDD, etc., plus required assumptions.
+## Identification strategy 
+
+OLS-with-controls
+
+With an OLS‑with‑controls design, we can estimate the causal effect by:
+- Regressing the outcome on the treatment
+- Adding control variables that absorb confounding variation
+- Relying on a conditional exogeneity assumption to interpret the coefficient causally.
+
+The treatment group consists of clubs finishing 6th–8th, and the control group consists of clubs finishing 9th–10th. By restricting the sample to this narrow window, the design approximates a quasi‑experimental comparison around the finals cutoff.
+
+Key assumption (Conditional Exogeneity): after controlling for lagged performance, lagged membership, club fixed effects, and year fixed effects, finals qualification is uncorrelated with unobserved determinants of membership.
+
+Why this assumption is plausible
+- Clubs finishing 6th–10th are extremely similar in underlying strength, often separated by one win or percentage.
+- Supporter sentiment and club fundamentals evolve smoothly with ladder position; nothing else jumps at the 8th‑place cutoff.
+- Lagged controls absorb performance trends and club size.
+- Club fixed effects remove time‑invariant differences (market size, supporter base, history).
+- Year fixed effects remove league‑wide shocks.
+
+Together, these features make conditional exogeneity credible.
 
 
 
