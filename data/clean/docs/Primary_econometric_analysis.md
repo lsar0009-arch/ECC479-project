@@ -60,7 +60,86 @@ Together, these features make conditional exogeneity credible.
 
 
 ## Regression table  
-Clean, formatted, not raw software output.
+
+## Model: Membership ~ Ladder Position (full sample)
+
+Interpretation
+Direction: The coefficient is negative (–958.90), meaning worse ladder positions are associated with lower membership.
+
+Magnitude: Each one‑place drop on the ladder is associated with ~959 fewer members.
+
+Units: Members per ladder position.
+
+Significance: Statistically significant (p = 0.0015).
+
+Holding constant: Again, nothing is held constant — simple OLS with HC3 robust errors.
+
+Meaning
+Across the full league, better‑performing teams tend to have higher membership — but the effect is small (R² = 0.044). Performance explains only ~4% of membership variation.
+
+
+## Model: Membership ~ Ladder Position (positions 1–4 only)
+
+Interpretation
+Direction: The coefficient is negative (–858), meaning worse ladder positions are associated with lower membership.
+
+Magnitude: A one‑place drop corresponds to ~858 fewer members.
+
+Units: Members per ladder position.
+
+Significance: Not significant (p = 0.771).
+
+Holding constant: Nothing — simple OLS with HC3 robust errors.
+
+Meaning
+Among top‑performing clubs, ladder position has no meaningful relationship with membership. These clubs already have large, stable supporter bases.
+
+## Model: Membership ~ Ladder Position (positions 5–8 only)
+
+Interpretation
+Direction: The coefficient on ladder position is positive (+350.77), meaning that worse ladder positions (higher numbers) are associated with slightly higher membership — but this is almost certainly noise.
+
+Magnitude: A one‑place drop on the ladder is associated with +351 members, on average.
+
+Units: Membership is measured in number of members; ladder position is measured in rank places.
+
+Significance: Not significant (p = 0.890). This is pure noise; the model explains 0% of variation (R² ≈ 0.0004).
+
+Holding constant: Nothing is held constant — this is a simple bivariate OLS with HC3 robust errors.
+
+## Model: Membership ~ Ladder Position (positions 9–10 only)
+
+Interpretation
+Direction: The coefficient is negative (–10,223), meaning worse ladder positions are associated with lower membership.
+
+Magnitude: A one‑place drop is associated with ~10,223 fewer members.
+
+Units: Members per ladder position.
+
+Significance: Not significant (p = 0.192).
+
+## Holding constant: Nothing — simple OLS with HC3 robust errors.
+
+Meaning
+Among clubs finishing 9th–10th, there is no statistically reliable relationship between ladder position and membership. The large coefficient is unstable due to the tiny sample (28 obs).
+
+Model: Membership ~ Ladder Position (positions 11–18 only)
+
+Interpretation
+Direction: The coefficient is negative (–2,018), meaning worse ladder positions are associated with lower membership.
+
+Magnitude: Each one‑place drop corresponds to ~2,018 fewer members.
+
+Units: Members per ladder position.
+
+Significance: Marginal (p = 0.081).
+
+Holding constant: Nothing — simple OLS with HC3 robust errors.
+
+Meaning
+Among lower‑ranked teams, there is a weak negative relationship between performance and membership, but it is not statistically strong.
+
+
 
 
 
