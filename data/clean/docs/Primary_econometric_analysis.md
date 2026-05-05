@@ -146,16 +146,35 @@ Among lower‑ranked teams, there is a weak negative relationship between perfor
 
 
 
-
-
-## Interpretation  
-Direction, magnitude, units, what is held constant.
-
-
-
-
 ## Threats / limitations  
-OVB, selection, reverse causality, measurement, sample selection.
+
+Most plausible threat: Omitted variable bias from unobserved club momentum  
+A key threat is that clubs finishing 6th–8th may have underlying positive momentum (e.g., improving list quality, coaching stability, rising supporter sentiment) that is not fully captured by lagged ladder position or lagged membership.
+
+Sign of the bias: This would bias the estimated treatment effect upwards.
+If momentum both increases the probability of qualifying for finals and independently boosts next‑year membership, then part of the estimated effect of finals qualification would actually reflect underlying momentum rather than the treatment itself.
+
+What to do about it:
+- restricted the sample to 6th–10th, where clubs are extremely similar in underlying strength, reducing variation in momentum.
+- include a lagged ladder position to absorb performance trends.
+- include a lagged membership to absorb supporter‑base trends.
+- use club fixed effects to remove time‑invariant differences (market size, supporter base, history).
+- use year fixed effects to absorb league‑wide shocks.
+
+These steps reduce, but cannot fully eliminate, the risk that unobserved momentum drives both finals qualification and membership growth.
+
+
+Secondary Threats
+
+Reverse causality (unlikely but possible)  
+Membership cannot affect past ladder position, but strong membership bases may indirectly support better performance (via resources, facilities, recruitment).
+- Sign: Would bias the estimate downwards if large clubs tend to finish higher but also have less room to grow membership.
+- Mitigation: Using lagged membership and restricting to 6th–10th reduces this channel.
+
+Measurement error in membership  
+AFL membership definitions vary slightly across clubs and years.
+- Sign: Likely attenuates effects towards zero.
+- Mitigation: Using official AFL‑published totals and year fixed effects reduces inconsistency.
 
 
 
