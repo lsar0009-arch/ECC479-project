@@ -49,3 +49,31 @@ Quadratic ladder position
 
 - Cluster at state level  
      - Tests sensitivity to broader geographic correlation.
+
+
+
+2.5 Identification‑Relevant Check (Required for Causal Claim)
+
+Placebo Threshold Test
+- Use 5th vs 11th, or 4th vs 12th, where finals qualification is not at stake.
+- If the effect disappears, it supports the causal interpretation.
+
+Bandwidth Sensitivity
+- Estimate using only clubs finishing 7th–9th, then 6th–10th, then 5th–11th.
+- A causal threshold effect should be strongest in the narrowest window.
+
+Pre‑trend Check
+- Test whether clubs finishing 6th–8th already had higher pre‑treatment membership growth.
+- If pre‑trends are flat, the causal claim strengthens.
+
+
+
+## 3. Robustness Table
+
+
+
+## 4. Interpretation of Robustness Checks
+
+
+
+## Final Credibility Statement
