@@ -177,25 +177,30 @@ Among lower-performing teams, membership decreases as ladder position worsens. T
 5. Full data set 
 Across all ladder positions, better performance correlates with higher membership. The coefficient of -959 indicates membership decreases by about 959 for each worse ladder position, representing a statistically significant relationship (p<0.001).
 
-6. Discointinuous Regression (Top 4 to 5-8) - TBC
+6. Discointinuous Regression (Top 4 to 5-8) 
 
-7. Discointinuous Regression (5-8 to 9-10) - TBC
+The regression discontinuity analysis at the Top 4 versus 5–8 cutoff shows no evidence of a meaningful shift in membership when clubs move into the Top 4. The estimated discontinuity is small (+4,050 members) and statistically insignificant (p = 0.626), indicating that finishing inside the Top 4 does not produce a detectable membership boost relative to finishing 5–8. Both the running variable and the interaction term are also insignificant, suggesting that neither the underlying trend in membership nor the slope of the relationship changes across the cutoff. The model explains very little variation in membership, reinforcing that ladder position around this threshold is not a strong predictor. Combined with the visual inspection of the fitted lines, the results imply that elite performance (Top 4) does not generate a sharp increase in membership, complementing the earlier finding that finals qualification (5–8) also shows no discontinuity. Together, these results suggest that membership is driven by broader, longer‑term factors rather than marginal changes in ladder position.
+
+7. Discointinuous Regression (5-8 to 9-10) 
+
+The regression discontinuity analysis at the 5–8 versus 9–10 ladder cutoff provides no evidence of a meaningful jump in membership. The estimated discontinuity is negative (–9,738 members) and statistically insignificant (p = 0.343), indicating that clubs moving from 9–10 into the 5–8 finals bracket do not experience a detectable increase in membership. Neither the running variable nor the interaction term is significant, suggesting that the slope of the membership–ladder relationship does not change across the cutoff. Model fit is extremely weak (R² = 0.022), and the joint F‑test confirms that the predictors have no explanatory power. Combined with the visual inspection of the fitted lines, the results imply that finals qualification at this threshold does not drive membership growth, motivating the need to examine alternative cutoffs such as Top 4 versus 5–8.
 
 
 
 ### Overall Key Insights
-- There is a weak negative correlation between ladder position and membership (better teams tend to have slightly higher membership)
-- Finals teams have modestly higher membership (~8% higher on average). This is a weak first‑order effect, indicating that making finals matters, but not dramatically.
-- Top 4 teams have ~18% higher average membership than teams that miss finals
-- A weak negative relationship: better ladder position is associated with slightly higher membership. The effect is small, suggesting performance is not the dominant driver of membership.
-- Growth is highest for positions 2, 4, 6 (8–15%) and is lowest for positions 13–17 (0–4%)
+- There is a weak negative correlation between ladder position and membership — better‑performing teams tend to have slightly higher membership, but the effect is small.
 
-Teams differ substantially in scale:
-- Richmond, Collingwood, West Coast: 80k–110k
-- Brisbane, North Melbourne, St Kilda: 30k–50k
-- Gold Coast: consistently lowest
+- Finals teams (positions 1–8) show modestly higher membership (~8% higher on average), indicating that qualifying for finals matters, though not dramatically.
 
-Therefore, club identity is a major determinant of membership levels
+- Top 4 teams have roughly 18% higher average membership than teams that miss finals, but the regression discontinuity analysis shows no statistically significant jump at either the Top 4 or 5–8 cutoffs.
+
+- The 5–8 vs 9–10 RDD and Top 4 vs 5–8 RDD both yield insignificant discontinuities, confirming that marginal changes in ladder position do not drive membership growth.
+
+- Membership growth patterns are uneven: positions 2, 4, and 6 show the highest growth (8–15%), while 13–17 remain flat (0–4%).
+
+- Club identity is the dominant factor — large clubs such as Richmond, Collingwood, and West Coast consistently attract 80k–110k members, while smaller clubs like Brisbane, North Melbourne, and St Kilda range between 30k–50k, and Gold Coast remains lowest.
+
+- Overall, performance contributes weakly to membership variation; brand strength and long‑term engagement appear to be the primary drivers.
 
 
 
