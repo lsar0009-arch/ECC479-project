@@ -86,3 +86,5 @@ Membership changes are driven by longer‑term factors, not these specific ladde
 
 
 ## Final Credibility Statement
+
+Across all three robustness checks, the main null result consistently held. The Top‑4 cutoff estimates were unstable across bandwidths—changing sign and magnitude while remaining imprecise—which is exactly the pattern you see when there is no underlying discontinuity, strengthening confidence that finishing 4th rather than 5th does not causally shift membership. The Finals cutoff behaved the same way: across main, narrow, and wide windows, the estimates again flipped sign and remained statistically weak, showing that the null result is not specific to one threshold but generalises across different definitions of “treatment,” which increases credibility. Finally, the placebo cutoff produced a noisy, insignificant estimate, as a valid design should; the absence of a fake jump at a meaningless threshold confirms that the RDD is not spuriously generating discontinuities. Taken together, the surviving pattern across all checks reinforces the credibility of the main finding: there is no causal membership jump at any ladder threshold.
