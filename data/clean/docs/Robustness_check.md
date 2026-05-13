@@ -17,7 +17,7 @@ What it is
 This is the RDD‑specific robustness check that tests whether your estimated discontinuity is sensitive to how much data you include around the cutoff.
 
 Three versions:
-- Main bandwidth → your preferred window
+- Main bandwidth → preferred window
 - Narrow bandwidth → zooms in very close to the cutoff
 - Wide bandwidth → includes more observations further away
 
