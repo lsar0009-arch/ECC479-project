@@ -2,7 +2,7 @@ import pandas as pd
 import statsmodels.formula.api as smf
 
 # ---- Load cleaned data ----
-df = pd.read_csv("data/cleaned_afl.csv")
+df = pd.read_csv("data/clean/merged_data_2012_2025.csv")
 
 # ---- Helper function ----
 def run_rdd(data, treatment, running):
@@ -57,15 +57,15 @@ tau_wide_finals, se_wide_finals = extract_tau(model_wide_finals, "five_to_eight"
 tau_placebo, se_placebo = extract_tau(model_placebo, "placebo")
 
 # ---- Print results ----
-print("\n--- Robustness Results (Top 4 Cutoff) ---")
+print("\n---- Robustness Results (Top 4 Cutoff) ----")
 print("Main:", tau_base_top4, se_base_top4)
 print("Narrow:", tau_narrow_top4, se_narrow_top4)
 print("Wide:", tau_wide_top4, se_wide_top4)
 
-print("\n--- Robustness Results (Finals Cutoff) ---")
+print("\n---- Robustness Results (Finals Cutoff) ----")
 print("Main:", tau_base_finals, se_base_finals)
 print("Narrow:", tau_narrow_finals, se_narrow_finals)
 print("Wide:", tau_wide_finals, se_wide_finals)
 
-print("\n--- Placebo Cutoff ---")
+print("\n---- Placebo Cutoff ----")
 print("Placebo:", tau_placebo, se_placebo)
