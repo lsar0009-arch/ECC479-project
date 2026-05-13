@@ -68,12 +68,15 @@ data/
   - docs
     - codebook.md
     - EDA.md
-    - primary_econometric_analysis.md                     
+    - primary_econometric_analysis.md    
+    - robustness_check.md                 
   - membership_clean.csv
   - merged_data_2012_2025.csv
 
                          
-outputs/            
+outputs/
+- 5_8_vs_9_10_rdd.png
+- 5_8_vs_9_10_summary.txt       
 - finals_5_8_regression_plot.png
 - finals_5_8_regression_summary.txt  
 - full_regression_plot.png         
@@ -86,6 +89,8 @@ outputs/
 - positions_11_18_regression_summary.txt
 - top4_regression_plot.png
 - top4_regression_summary.txt
+- top4_vs_5_8_rdd.png
+- top4_vs_5_8_summary.txt
 
 
 src/                           
@@ -98,7 +103,6 @@ README.md
 
 
 ## Software Requirements
-
 
 This project uses Python and several scientific computing libraries.
 
@@ -131,6 +135,9 @@ How to Run the Project From Scratch
 - 03_merge_ladder_membership.py
 - 04_EDA.md_analysis.py
 - 05_regressions_visuals.py
+- 06_discontinuous_1.py
+- 07_discontinuous_2.py
+- 08_robustness_check_clean.py
 
 - Cleaned datasets will appear in data/clean/.
 
@@ -163,6 +170,19 @@ Runs all regression specifications and generates the associated visualisations.
 This script loads the cleaned/merged data, estimates the OLS models for each ladder‑position band saves regression summaries to the outputs/ directory, and produces scatterplots and fitted‑line visuals for each specification.
 
 
+06_discontinuous_1.py
+
+Performs regression discontinuity design (RDD) analysis to estimate the causal effect of qualifying for the Top 4 (vs. 5-8) on club membership. It filters data to ladder positions 1-8, creates a treatment indicator for Top 4, centers the running variable at the cutoff (4.5), runs an OLS regression with interaction terms, prints the model summary and estimated discontinuity, and generates a scatter plot with fitted regression lines on both sides of the cutoff.
+
+
+07_discontinuous_2.py
+
+Conducts RDD analysis to assess the impact of qualifying for finals (5-8 vs. 9-10 positions) on membership. It filters data to positions 5-10, defines treatment for 5-8, centers the running variable at 8.5, fits an OLS model with interactions, outputs the regression summary and discontinuity estimate, and creates a plot showing the data scatter with fitted lines for each group.
+
+
+08_robustness_check_clean.py
+
+Runs robustness checks for the RDD analyses on Top 4 and finals cutoffs. It defines treatment and running variables, tests different bandwidths (main, narrow, wide) around each cutoff, includes a placebo test at position 6.5, fits multiple OLS models, and prints the estimated coefficients and standard errors for each specification to validate the main findings.
 
 
 Raw Data Sources
