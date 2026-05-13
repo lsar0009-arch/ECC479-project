@@ -12,10 +12,11 @@ This suggests that crossing these performance thresholds does not cause a meanin
 
 
 1. Bandwidth Sensitivity (Main → Narrow → Wide)
+
 What it is
 This is the RDD‑specific robustness check that tests whether your estimated discontinuity is sensitive to how much data you include around the cutoff.
 
-You ran three versions:
+Three versions:
 - Main bandwidth → your preferred window
 - Narrow bandwidth → zooms in very close to the cutoff
 - Wide bandwidth → includes more observations further away
@@ -24,13 +25,13 @@ Why it matters
 - RDD identification relies on the assumption that units just above and below the cutoff are comparable.
 - But the choice of bandwidth is subjective.
 
-So this check asks: Does the estimated jump remain stable when I change the bandwidth?
+So this check asks: Does the estimated jump remain stable when we change the bandwidth?
 
 
 2. Alternative Sample Windows (Top‑4 vs Finals Cutoff)
 
 What it is
-You run the RDD at two different meaningful thresholds:
+RDD ran at two different meaningful thresholds:
 - Top‑4 cutoff (4 vs 5)
 - Finals cutoff (8 vs 9)
 These represent two different causal stories:
@@ -48,7 +49,7 @@ Why it matters:
 What it is
 A placebo RDD where you pretend the cutoff is at a point where no treatment actually occurs.
 
-You used the 6/7 ladder position — a threshold with no meaning for finals or home advantage.
+Using the 6/7 ladder position — a threshold with no meaning for finals or home advantage.
 
 Why it matters
 - A valid RDD should only show a jump at the true cutoff.
