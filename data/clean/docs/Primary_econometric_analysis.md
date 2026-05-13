@@ -1,220 +1,174 @@
 ## Declaration  
+ 
+This analysis is causal.
+I aim to estimate the causal effect of crossing key AFL ladder thresholds on club membership. Two thresholds are evaluated:
 
-This is a causal analysis.  
-I aim to estimate the causal effect of crossing the AFL finals qualification threshold on subsequent club membership tallies. Clubs finishing just inside the cutoff (6th–8th) are compared with clubs finishing just outside it (9th–10th). This design treats finals qualification as a treatment and uses near‑threshold comparisons to approximate a quasi‑experimental setting.
+Top 4 vs 5–8 (elite performance threshold)
+
+5–8 vs 9–10 (finals qualification threshold)
+
+Both are implemented using local linear regression discontinuity designs (RDDs), which treat crossing each threshold as a treatment and compare clubs immediately on either side.
 
 
 ## Econometric specification  
 
-I estimate a linear regression model of club membership on finals qualification status:
 
->membership_total𝑖𝑡 = 𝛼 + 𝛽Qualified𝑖𝑡 − 1+ 𝛾′𝑋𝑖𝑡−1 +𝜇𝑖 + 𝜆𝑡 + 𝜀𝑖𝑡 >
+2.1 Descriptive specifications (correlations)
+I estimate simple OLS regressions of membership on ladder position:
+
+
+𝑚𝑒𝑚𝑏𝑒𝑟𝑠ℎ𝑖𝑝𝑖=𝛼+𝛿𝑙𝑎𝑑𝑑𝑒𝑟_𝑝𝑜𝑠𝑖𝑡𝑖𝑜𝑛𝑖+𝜀𝑖
+
+These are run:
+- on the full sample
+- and separately within ladder bands (1–4, 5–8, 9–10, 11–18)
+
+Functional form: linear
+Regressors: ladder position only
+Sample: varies by band
+Error structure: HC3 robust standard errors
+
+Justification:  
+These regressions quantify first‑order associations between performance and membership. They are not interpreted causally.
+
+
+2.2 Causal specifications (RDD models)
+For each cutoff, I estimate a local linear RDD:
+
+Model 1 — Top 4 vs 5–8 (cutoff at 4.5)
+Define:
+- 𝑡𝑜𝑝4𝑖 = 1 if 𝑙𝑎𝑑𝑑𝑒𝑟𝑖 ∈ {1,2,3,4}, 0 
+- if 𝑙𝑎𝑑𝑑𝑒𝑟𝑖 ∈ {5,6,7,8} 𝑟𝑢𝑛𝑛𝑖𝑛𝑔𝑖^(4.5) = 𝑙𝑎𝑑𝑑𝑒𝑟𝑖−4.5
+
+𝑚𝑒𝑚𝑏𝑒𝑟𝑠ℎ𝑖𝑝𝑖=𝛼1+𝜏1𝑡𝑜𝑝4𝑖+𝛽1(𝑙𝑎𝑑𝑑𝑒𝑟𝑖−4.5)+𝛾1[𝑡𝑜𝑝4𝑖⋅(𝑙𝑎𝑑𝑑𝑒𝑟𝑖−4.5)]+𝜀𝑖
+
+Model 2 — 5–8 vs 9–10 (cutoff at 8.5)
+Define:
+- 𝑓𝑖𝑣𝑒_𝑡𝑜_𝑒𝑖𝑔ℎ𝑡𝑖= 1 if 𝑙𝑎𝑑𝑑𝑒𝑟𝑖∈{5,6,7,8}, 0 if 𝑙𝑎𝑑𝑑𝑒𝑟𝑖∈{9,10}
+- 𝑟𝑢𝑛𝑛𝑖𝑛𝑔𝑖^(8.5) = 𝑙𝑎𝑑𝑑𝑒𝑟𝑖−8.5
+
+𝑚𝑒𝑚𝑏𝑒𝑟𝑠ℎ𝑖𝑝𝑖=𝛼2+𝜏2𝑓𝑖𝑣𝑒_𝑡𝑜_𝑒𝑖𝑔ℎ𝑡𝑖+𝛽2(𝑙𝑎𝑑𝑑𝑒𝑟𝑖−8.5)+𝛾2[𝑓𝑖𝑣𝑒_𝑡𝑜_𝑒𝑖𝑔ℎ𝑡𝑖⋅(𝑙𝑎𝑑𝑑𝑒𝑟𝑖−8.5)]+𝜀𝑖
+
 where 𝑖 indexes clubs and 𝑡 seasons.
 
-Regressors
+Functional form
+- Local linear regression
+- Side‑specific slopes via interaction terms
+- No higher‑order polynomials
 
-Qualified𝑖𝑡−1: Indicator equal to 1 if club 𝑖 qualified for finals in season 𝑡−1 (finished 1st–8th), 0 otherwise. This is the treatment variable of interest.
+Sample
+- RDD 1: ladder positions 1–8
+- RDD 2: ladder positions 5–10
 
-𝑋𝑖𝑡−1: Vector of lagged controls (e.g., ladder position, percentage, previous membership level) capturing underlying club strength and size.
+Error structure
+OLS with conventional standard errors (assignment baseline)
 
-𝜇𝑖: Club fixed effects, absorbing time‑invariant club characteristics (history, market size, brand).
+Justification
+RDD is appropriate because:
+- treatment status changes discretely at known thresholds
+- clubs cannot precisely manipulate ladder position
+- membership is continuous
+- local windows increase comparability
 
-𝜆𝑡: Year fixed effects, capturing league‑wide shocks (rule changes, macro conditions, AFL‑wide membership trends).
 
-Sample  
-The main specification restricts the sample to clubs finishing between 6th and 10th on the ladder in a given year. This focuses on teams near the finals threshold, improving comparability between treated (6th–8th) and control (9th–10th) clubs and aligning with the causal interpretation of a near‑cutoff design.
+## 3. Identification strategy (causal component)
 
-Error structure  
-Standard errors are clustered at the club level to allow for arbitrary serial correlation and heteroskedasticity within clubs over time.
+Design: Regression Discontinuity Design (RDD)
 
-- Arbitrary serial correlation: The residuals for a given club may move together over time in any way, and we make no assumptions about the structure of that correlation.
-- Heteroskedasticity: the spread of the residuals changes depending on the value of the predictors or across groups.
+Key assumption: continuity of potential outcomes
+- In the absence of treatment, expected membership would evolve smoothly in ladder position around each cutoff:
 
+lim 𝑥↓𝑐𝐸[𝑚𝑒𝑚𝑏𝑒𝑟𝑠ℎ𝑖𝑝∣𝑙𝑎𝑑𝑑𝑒𝑟=𝑥]=lim𝑥↑𝑐𝐸[𝑚𝑒𝑚𝑏𝑒𝑟𝑠ℎ𝑖𝑝∣𝑙𝑎𝑑𝑑𝑒𝑟=𝑥]
 
-Brief justification  
-A linear fixed‑effects model is appropriate because the outcome (membership totals) is continuous and we are interested in an average treatment effect of finals qualification. Club fixed effects control for time‑invariant differences across clubs, while year fixed effects absorb common shocks. Restricting the sample to 6th–10th placed clubs approximates a quasi‑experimental comparison around the finals cutoff, supporting a causal interpretation of 𝛽 as the effect of crossing the finals qualification threshold on subsequent membership.
+Why plausible
+- Clubs cannot precisely target 4th or 8th place.
+- Supporter sentiment and club fundamentals evolve smoothly with performance.
+- Nothing structural changes exactly at the cutoff except the treatment definition.
+- Narrow windows (1–8, 5–10) increase comparability.
 
+Under this assumption, any discontinuity at the cutoff is a causal effect.
 
-## Identification strategy 
 
-OLS-with-controls
 
-With an OLS‑with‑controls design, we can estimate the causal effect by:
-- Regressing the outcome on the treatment
-- Adding control variables that absorb confounding variation
-- Relying on a conditional exogeneity assumption to interpret the coefficient causally.
+### 4. Regression Discontinuity Results
 
-The treatment group consists of clubs finishing 6th–8th, and the control group consists of clubs finishing 9th–10th. By restricting the sample to this narrow window, the design approximates a quasi‑experimental comparison around the finals cutoff.
+| Variable                               | (1) Top 4 vs 5–8      | (2) 5–8 vs 9–10       |
+|----------------------------------------|------------------------|------------------------|
+| **Treatment effect**                   | 4049.5                | -9738.2               |
+|                                        | (8292.0)              | (10200.0)             |
+| **Running variable**                   | 350.8                 | -10220.0              |
+|                                        | (2559.0)              | (7656.8)              |
+| **Interaction term**                   | -1208.9               | 10570.0               |
+|                                        | (3618.9)              | (8030.5)              |
+| **Constant**                           | 57240.0               | 68380.0               |
+|                                        | (5863.4)              | (8560.6)              |
+| **N**                                  | 112                   | 84                    |
+| **R²**                                 | 0.02                  | 0.022    
 
-Key assumption (Conditional Exogeneity): after controlling for lagged performance, lagged membership, club fixed effects, and year fixed effects, finals qualification is uncorrelated with unobserved determinants of membership.
+Interpretation of main coefficients
 
-Why this assumption is plausible
-- Clubs finishing 6th–10th are extremely similar in underlying strength, often separated by one win or percentage.
-- Supporter sentiment and club fundamentals evolve smoothly with ladder position; nothing else jumps at the 8th‑place cutoff.
-- Lagged controls absorb performance trends and club size.
-- Club fixed effects remove time‑invariant differences (market size, supporter base, history).
-- Year fixed effects remove league‑wide shocks.
+RDD 1 — Top 4 vs 5–8
+- Direction: positive
+- Magnitude: +4,050 members
+- Units: members
+- Significance: p = 0.626 (not significant)
+- Holding constant: distance from cutoff and side‑specific slopes
 
-Together, these features make conditional exogeneity credible.
+Interpretation:  
+No evidence that entering the Top 4 causes an increase in membership.
 
 
+RDD 2 — 5–8 vs 9–10
+- Direction: negative
+- Magnitude: –9,738 members
+- Units: members
+- Significance: p = 0.343 (not significant)
+- Holding constant: distance from cutoff and side‑specific slopes
 
-## Regression table and its interpretation  
+Interpretation:  
+No evidence that qualifying for finals (5–8) causes an increase in membership.
 
-## Model: Membership ~ Ladder Position (full sample)
 
-Coefficient: –958.90
+Overall interpretation
 
-Standard error: (302.06)
+Across both thresholds:
+- no discontinuities
+- no visible jumps in the plots
+- very low R²
+- slopes do not differ meaningfully
 
-N: 252
-
-R²: 0.0443
-
-Interpretation
-Direction: The coefficient is negative (–958.90), meaning worse ladder positions are associated with lower membership.
-
-Magnitude: Each one‑place drop on the ladder is associated with ~959 fewer members.
-
-Units: Members per ladder position.
-
-Significance: Statistically significant (p = 0.0015).
-
-Holding constant: Again, nothing is held constant — simple OLS with HC3 robust errors.
-
-Meaning
-Across the full league, better‑performing teams tend to have higher membership — but the effect is small (R² = 0.044). Performance explains only ~4% of membership variation.
-
-
-
-## Model: Membership ~ Ladder Position (positions 1–4 only)
-
-Coefficient: –858.11
-
-Standard error: (2,946.87)
-
-N: 56
-
-R²: 0.0019
-
-Interpretation
-Direction: The coefficient is negative (–858), meaning worse ladder positions are associated with lower membership.
-
-Magnitude: A one‑place drop corresponds to ~858 fewer members.
-
-Units: Members per ladder position.
-
-Significance: Not significant (p = 0.771).
-
-Holding constant: Nothing — simple OLS with HC3 robust errors.
-
-Meaning
-Among top‑performing clubs, ladder position has no meaningful relationship with membership. These clubs already have large, stable supporter bases.
-
-
-
-## Model: Membership ~ Ladder Position (positions 5–8 only)
-
-Coefficient: +350.77
-
-Standard error: (2,535.27)
-
-N: 56
-
-R²: 0.0004
-
-Interpretation
-Direction: The coefficient on ladder position is positive (+350.77), meaning that worse ladder positions (higher numbers) are associated with slightly higher membership — but this is almost certainly noise.
-
-Magnitude: A one‑place drop on the ladder is associated with +351 members, on average.
-
-Units: Membership is measured in number of members; ladder position is measured in rank places.
-
-Significance: Not significant (p = 0.890). This is pure noise; the model explains 0% of variation (R² ≈ 0.0004).
-
-Holding constant: Nothing is held constant — this is a simple bivariate OLS with HC3 robust errors.
-
-
-## Model: Membership ~ Ladder Position (positions 9–10 only)
-
-Coefficient: –10,223.14
-
-Standard error: (7,836.08)
-
-N: 28
-
-R²: 0.0659
-
-Interpretation
-Direction: The coefficient is negative (–10,223), meaning worse ladder positions are associated with lower membership.
-
-Magnitude: A one‑place drop is associated with ~10,223 fewer members.
-
-Units: Members per ladder position.
-
-Significance: Not significant (p = 0.192).
-
-Holding constant: Nothing — simple OLS with HC3 robust errors.
-
-Meaning
-Among clubs finishing 9th–10th, there is no statistically reliable relationship between ladder position and membership. The large coefficient is unstable due to the tiny sample (28 obs).
-
-
-## Model: Membership ~ Ladder Position (positions 11–18 only)
-
-Coefficient: –2,018.12
-
-Standard error: (1,156.70)
-
-N: 112
-
-R²: 0.0318
-
-Interpretation
-Direction: The coefficient is negative (–2,018), meaning worse ladder positions are associated with lower membership.
-
-Magnitude: Each one‑place drop corresponds to ~2,018 fewer members.
-
-Units: Members per ladder position.
-
-Significance: Marginal (p = 0.081).
-
-Holding constant: Nothing — simple OLS with HC3 robust errors.
-
-Meaning
-Among lower‑ranked teams, there is a weak negative relationship between performance and membership, but it is not statistically strong.
-
+Conclusion:  
+There is no causal evidence that marginal improvements in ladder position generate membership growth.
 
 
 ## Threats / limitations  
 
-Most plausible threat: Omitted variable bias from unobserved club momentum  
-A key threat is that clubs finishing 6th–8th may have underlying positive momentum (e.g., improving list quality, coaching stability, rising supporter sentiment) that is not fully captured by lagged ladder position or lagged membership.
+Most plausible threat: Unobserved club fundamentals and momentum
+A key threat to the RDD design is that clubs with strong underlying fundamentals—large supporter bases, strong brands, improving list quality, coaching stability, or rising supporter sentiment—are both more likely to finish above the cutoff and more likely to attract higher membership, independent of the treatment.
 
-Sign of the bias: This would bias the estimated treatment effect upwards.
-If momentum both increases the probability of qualifying for finals and independently boosts next‑year membership, then part of the estimated effect of finals qualification would actually reflect underlying momentum rather than the treatment itself.
+Sign and direction of bias:  
+This threat would bias the estimated treatment effect upwards.
+If stronger clubs are disproportionately on the “treated” side of the cutoff (Top 4 or 5–8), any observed jump in membership could reflect club strength, not the causal effect of crossing the threshold.
 
 What to do about it:
-- restricted the sample to 6th–10th, where clubs are extremely similar in underlying strength, reducing variation in momentum.
-- include a lagged ladder position to absorb performance trends.
-- include a lagged membership to absorb supporter‑base trends.
-- use club fixed effects to remove time‑invariant differences (market size, supporter base, history).
-- use year fixed effects to absorb league‑wide shocks.
+- Use narrow windows around each cutoff (1–8 and 5–10), ensuring clubs on either side are highly comparable in underlying strength.
+- Allow separate slopes on each side of the cutoff, reducing functional‑form bias.
+- Verify visually that membership trends are smooth in ladder position except at the threshold.
+- Check that no visible jump appears in the scatterplots, supporting the continuity assumption.
 
-These steps reduce, but cannot fully eliminate, the risk that unobserved momentum drives both finals qualification and membership growth.
+These steps reduce (but cannot fully eliminate) the risk that unobserved fundamentals drive both ladder position and membership.
 
+Secondary threats
 
-Secondary Threats
+Reverse causality (conceptual but limited here)
+Membership cannot affect past ladder position, but clubs with large supporter bases may indirectly support better performance (via resources, facilities, recruitment).
+- Sign: would bias estimates upwards, making treated clubs appear to have higher membership even without a causal effect.
+- Mitigation: RDD focuses on clubs very close to the cutoff, where small performance differences are plausibly quasi‑random, limiting this channel.
 
-Reverse causality (unlikely but possible)  
-Membership cannot affect past ladder position, but strong membership bases may indirectly support better performance (via resources, facilities, recruitment).
-- Sign: Would bias the estimate downwards if large clubs tend to finish higher but also have less room to grow membership.
-- Mitigation: Using lagged membership and restricting to 6th–10th reduces this channel.
-
-Measurement error in membership  
-AFL membership definitions vary slightly across clubs and years.
-- Sign: Likely attenuates effects towards zero.
-- Mitigation: Using official AFL‑published totals and year fixed effects reduces inconsistency.
+Measurement error in membership
+AFL membership definitions vary slightly across clubs and years (e.g., counting 3‑game vs 11‑game packages).
+- Sign: likely attenuates any true effect towards zero, making discontinuities harder to detect.
+- Mitigation: RDD relies on sharp jumps, not fine‑grained levels, so small definitional inconsistencies are less problematic.
 
 
 
