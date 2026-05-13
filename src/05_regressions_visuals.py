@@ -411,6 +411,72 @@ print(f'Summary saved to: {summary_path}')
 print('\nRegression Summary:')
 print(model.summary())
 
+# Regression discontinuity analysis for cutoff between top 4 and positions 5-8
+rd_df = df[df['ladder_position'].between(1, 8)].copy()
+rd_df['top4'] = (rd_df['ladder_position'] <= 4).astype(int)
+rd_df['pos_dist'] = rd_df['ladder_position'] - 4.5
+rd_df['top4_pos_dist'] = rd_df['top4'] * rd_df['pos_dist']
+
+rd_model = smf.ols('membership ~ top4 + pos_dist + top4_pos_dist', data=rd_df).fit(cov_type='HC3')
+
+# Plot the regression discontinuity fit
+plt.figure(figsize=(10, 6))
+plt.scatter(rd_df.loc[rd_df['top4'] == 1, 'ladder_position'], rd_df.loc[rd_df['top4'] == 1, 'membership'],
+            alpha=0.7, color='tab:blue', edgecolor='k', s=80, label='Top 4')
+plt.scatter(rd_df.loc[rd_df['top4'] == 0, 'ladder_position'], rd_df.loc[rd_df['top4'] == 0, 'membership'],
+            alpha=0.7, color='tab:orange', edgecolor='k', s=80, label='Positions 5-8')
+
+x_top4 = np.linspace(1, 4, 100)
+pred_top4 = pd.DataFrame({
+    'top4': 1,
+    'pos_dist': x_top4 - 4.5,
+    'top4_pos_dist': x_top4 - 4.5
+})
+pred_top4['membership'] = rd_model.predict(pred_top4)
+
+x_5_8 = np.linspace(5, 8, 100)
+pred_5_8 = pd.DataFrame({
+    'top4': 0,
+    'pos_dist': x_5_8 - 4.5,
+    'top4_pos_dist': 0
+})
+pred_5_8['membership'] = rd_model.predict(pred_5_8)
+
+plt.plot(x_top4, pred_top4['membership'], color='navy', linewidth=2.5, label='Top 4 fit')
+plt.plot(x_5_8, pred_5_8['membership'], color='darkorange', linewidth=2.5, label='Positions 5-8 fit')
+plt.axvline(4.5, color='gray', linestyle='--', linewidth=1.5, label='Cutoff (4/5)')
+
+plt.xlabel('Ladder Position')
+plt.ylabel('Membership')
+plt.title('Regression Discontinuity: Membership at Top 4 vs Positions 5-8')
+plt.xticks(range(1, 9))
+plt.grid(alpha=0.3)
+plt.legend()
+plt.tight_layout()
+
+plot_path = os.path.join(output_dir, 'top4_vs_5_8_discontinuity_plot.png')
+plt.savefig(plot_path, dpi=300)
+plt.close()
+
+# Save regression discontinuity summary
+summary_path = os.path.join(output_dir, 'top4_vs_5_8_discontinuity_summary.txt')
+with open(summary_path, 'w') as f:
+    f.write('Regression Discontinuity: Membership at Top 4 vs Positions 5-8\n')
+    f.write('=' * 80 + '\n\n')
+    f.write(rd_model.summary().as_text())
+    f.write('\n\nKey Discontinuity Statistics:\n')
+    f.write(f'Discontinuity jump (top4 indicator): {rd_model.params["top4"]:.2f}\n')
+    f.write(f'P-value for discontinuity: {rd_model.pvalues["top4"]:.4f}\n')
+    f.write(f'Slope below cutoff (top 4): {rd_model.params["pos_dist"] + rd_model.params["top4_pos_dist"] if "top4_pos_dist" in rd_model.params else rd_model.params["pos_dist"]:.4f}\n')
+    f.write(f'Slope above cutoff (positions 5-8): {rd_model.params["pos_dist"]:.4f}\n')
+    f.write(f'Observations: {len(rd_df)}\n')
+
+print('Regression discontinuity analysis completed for cutoff between top 4 and positions 5-8.')
+print(f'Regression discontinuity plot saved to: {plot_path}')
+print(f'Regression discontinuity summary saved to: {summary_path}')
+print('\nRegression Discontinuity Summary:')
+print(rd_model.summary())
+
 
 
 
